@@ -2,6 +2,7 @@
 import argparse
 import json
 import mimetypes
+import os
 from pathlib import Path
 import threading
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -9,6 +10,38 @@ from urllib.parse import urlsplit
 
 from .api import compile_request
 from .serving import load_predictor
+
+
+def request_body(handler):
+    """Read a POST body with chunked/Content-Length dual support.
+
+    BaseHTTPRequestHandler does not decode transfer-encoding: chunked on its
+    own. A gateway fronting this server (SF GPU Functions fn.6scloud.com)
+    strips Content-Length and forwards POSTs as chunked, which makes the
+    stock Content-Length-only read return an empty body and fail as 413/422.
+    When Transfer-Encoding says chunked, decode it here; otherwise fall back
+    to Content-Length.
+    """
+    if "chunked" in (handler.headers.get("Transfer-Encoding") or "").lower():
+        body = b""
+        while True:
+            line = handler.rfile.readline(1024).strip()
+            if b";" in line:
+                line = line.split(b";", 1)[0]
+            size = int(line or b"0", 16)
+            if size <= 0:
+                while True:  # drain trailers and the terminating CRLF
+                    trailer = handler.rfile.readline(1024)
+                    if trailer in (b"\r\n", b"\n", b""):
+                        break
+                return body
+            chunk = handler.rfile.read(size)
+            if len(chunk) < size:
+                return body  # upstream truncated; never loop forever
+            body += chunk
+            handler.rfile.read(2)  # chunk data CRLF
+    length = int(handler.headers.get("Content-Length", "0"))
+    return handler.rfile.read(length) if length > 0 else b""
 
 
 def strict_json(data):
@@ -81,17 +114,17 @@ def make_server(predictor, host="127.0.0.1", port=8791, *, static_root=None,
             if urlsplit(self.path).path not in ("/v1/inference", "/v1/systemone", "/api/jev"):
                 return self.send(404, {"error": "not found"})
             origin = self.headers.get("Origin")
-            if origin and urlsplit(origin).netloc != self.headers.get("Host"):
+            if origin and urlsplit(origin).netloc != self.headers.get("Host") \
+                    and os.environ.get("JEV_ALLOW_CROSS_ORIGIN", "") != "1":
                 return self.send(403, {"error": "cross-origin requests are disabled"})
             if self.headers.get_content_type() != "application/json":
                 return self.send(415, {"error": "Content-Type must be application/json"})
             try:
-                length = int(self.headers.get("Content-Length", "0"))
-                if length < 1 or length > max_body_bytes:
+                body = request_body(self)
+                if len(body) < 1:
+                    raise ValueError("empty request body")
+                if len(body) > max_body_bytes:
                     return self.send(413, {"error": "request body size is outside server limits"})
-                body = self.rfile.read(length)
-                if len(body) != length:
-                    raise ValueError("incomplete request body")
                 request = strict_json(body)
                 with lock:
                     response = predictor.predict(request)
