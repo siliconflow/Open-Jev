@@ -1,23 +1,22 @@
 {
-  "schema_version": 1,
-  "generated_at": "2026-09-21T06:27:47.369104+00:00",
+  "schema_version": 2,
   "status": "complete",
   "publication_ready": true,
-  "publication_gate": "Passed: all five streams complete; native replay, hosted aggregate replay, and hosted raw-response replay audits agree with exact source hashes.",
+  "publication_gate": "Six complete streams passed their independent JevBench audits; the 27B checkpoint also passed the complete full24 internal publication audit.",
   "required_streams": [
     "2b",
     "9b",
+    "new27b",
     "jev",
     "luna",
     "astra"
   ],
-  "title": "JevBench public subset: previously released Open-Jev baselines",
+  "title": "JevBench public subset: Open-Jev 27B v1.1 and released baselines",
   "scope": "231 public JevBench tasks only: 72 original, 48 easy, 111 hard. The private and judge tiers are unavailable; this is not the full 534-task benchmark and no full-benchmark composite is computed. ZefanCai Open-Jev uses Qwen LoRA weights and a decision head; it is a different system from the Kotoba and Codiv projects also called OpenJev.",
   "benchmark": {
     "name": "JevBench public subset",
     "upstream_url": "https://github.com/fstandhartinger/jevbench",
     "upstream_commit": "f8ce71361165846101d02ebc83ad44e47ae44fc3",
-    "execution_code_commit": "3c5bb4a5451ccfd81a5b9f2e05edaf2103805c94",
     "input_sha256": "2e20ff5f94dd04d015b3a7b9abd955757b6c5be25b55b97fcd141cb52f88b4aa",
     "dataset_sha256": "dc3995d8ae1e2fc8e81ce38431add509eb8bb39b85aadfd0c7c32079382dde51",
     "public_tasks": 231,
@@ -33,7 +32,9 @@
       "choice": 139,
       "score": 18
     },
-    "full_benchmark_score": null
+    "full_benchmark_score": null,
+    "baseline_execution_code_commit": "3c5bb4a5451ccfd81a5b9f2e05edaf2103805c94",
+    "new27b_execution_code_commit": "7ac6bab261bd97efc3d446152999e94ae432e5b0"
   },
   "protocol": {
     "sum_tolerance_strict": 0.001,
@@ -76,7 +77,28 @@
     },
     "latency_limit": "Heterogeneous quality-run diagnostics with one observation per task. No repeated latency benchmark, matched hardware, throughput, or energy-efficiency claim.",
     "cost_limit": "Hosted usage-times-tariff estimates are not billing receipts. Local compute is unmetered, not free.",
-    "probability_limit": "Native and verbalized probability metrics do not measure equivalent intrinsic model confidence."
+    "probability_limit": "Native and verbalized probability metrics do not measure equivalent intrinsic model confidence.",
+    "new27b": {
+      "sum_tolerance_strict": 0.001,
+      "sum_tolerance_rounding": 0.02,
+      "argmax_tie_break": "lexicographically_smallest_label",
+      "score_accuracy": "argmax_level_equals_gold_level",
+      "probabilities": "native",
+      "concurrency": 1,
+      "retries": 0,
+      "warmups": 0,
+      "prefix_cache": false,
+      "latency_note": "Four-rank frozen-base FSDP2 execution on a shared node; one observation per task. Timing starts after dispatch and includes collective prediction, rank validation and response validation. No HTTP/network timing, warmups or retries. These diagnostics are not comparable to the old single-GPU HTTP latency, matched-hardware speedups, throughput or energy efficiency.",
+      "transport": "torch_distributed_collective",
+      "execution": {
+        "mode": "frozen_base_fsdp2",
+        "world_size": 4,
+        "backend": "nccl",
+        "node_shared_with_other_jobs": true,
+        "candidate_batch_size": 1,
+        "http_server_started": false
+      }
+    }
   },
   "results": [
     {
@@ -1118,6 +1140,167 @@
         "max_length": 16384
       },
       "model_url": "https://huggingface.co/ZefanCai/Open-Jev-9B"
+    },
+    {
+      "id": "new27b",
+      "label": "Open-Jev 27B v1.1",
+      "status": "complete",
+      "audit_status": "passed",
+      "probability_source": "native",
+      "release_status": "v1.1",
+      "metrics": {
+        "n_planned": 231,
+        "n_attempted": 231,
+        "n_scorable": 231,
+        "n_valid": 231,
+        "n_correct": 197,
+        "accuracy": 0.8528138528138528,
+        "schema_validity": 1.0,
+        "schema_validity_strict": 1.0,
+        "n_renormalized": 0,
+        "operational_success": 1.0,
+        "brier_mean": 0.2419831167860275,
+        "ordinal_mae": 0.3798003972534468,
+        "n_strict_valid": 231,
+        "latency": null
+      },
+      "per_public_tier": {
+        "original": {
+          "n_planned": 72,
+          "n_attempted": 72,
+          "n_valid": 72,
+          "n_correct": 69,
+          "accuracy": 0.9583333333333334
+        },
+        "easy": {
+          "n_planned": 48,
+          "n_attempted": 48,
+          "n_valid": 48,
+          "n_correct": 48,
+          "accuracy": 1.0
+        },
+        "hard": {
+          "n_planned": 111,
+          "n_attempted": 111,
+          "n_valid": 111,
+          "n_correct": 80,
+          "accuracy": 0.7207207207207207
+        }
+      },
+      "per_family": {
+        "policy": {
+          "n_planned": 12,
+          "n_correct": 11,
+          "accuracy": 0.9166666666666666
+        },
+        "intent": {
+          "n_planned": 24,
+          "n_correct": 23,
+          "accuracy": 0.9583333333333334
+        },
+        "ordinal": {
+          "n_planned": 12,
+          "n_correct": 12,
+          "accuracy": 1.0
+        },
+        "extraction": {
+          "n_planned": 24,
+          "n_correct": 23,
+          "accuracy": 0.9583333333333334
+        },
+        "adequacy": {
+          "n_planned": 12,
+          "n_correct": 12,
+          "accuracy": 1.0
+        },
+        "routing": {
+          "n_planned": 12,
+          "n_correct": 12,
+          "accuracy": 1.0
+        },
+        "fact": {
+          "n_planned": 12,
+          "n_correct": 12,
+          "accuracy": 1.0
+        },
+        "tool_selection": {
+          "n_planned": 12,
+          "n_correct": 12,
+          "accuracy": 1.0
+        },
+        "long_policy": {
+          "n_planned": 19,
+          "n_correct": 11,
+          "accuracy": 0.5789473684210527
+        },
+        "probability": {
+          "n_planned": 10,
+          "n_correct": 7,
+          "accuracy": 0.7
+        },
+        "temporal_numeric": {
+          "n_planned": 15,
+          "n_correct": 2,
+          "accuracy": 0.13333333333333333
+        },
+        "ambiguous": {
+          "n_planned": 7,
+          "n_correct": 5,
+          "accuracy": 0.7142857142857143
+        },
+        "multi_hop": {
+          "n_planned": 18,
+          "n_correct": 16,
+          "accuracy": 0.8888888888888888
+        },
+        "tradeoff": {
+          "n_planned": 6,
+          "n_correct": 5,
+          "accuracy": 0.8333333333333334
+        },
+        "adversarial": {
+          "n_planned": 6,
+          "n_correct": 6,
+          "accuracy": 1.0
+        },
+        "trap": {
+          "n_planned": 8,
+          "n_correct": 8,
+          "accuracy": 1.0
+        },
+        "judge_hard": {
+          "n_planned": 17,
+          "n_correct": 15,
+          "accuracy": 0.8823529411764706
+        },
+        "routing_hard": {
+          "n_planned": 5,
+          "n_correct": 5,
+          "accuracy": 1.0
+        }
+      },
+      "checkpoint": {
+        "model": "Qwen/Qwen3.8-27B",
+        "method": "lora_decision_head",
+        "checkpoint_sha256": "c49994563c3c4f04a99d9130203c4e526f4ae5086c84deec57698d18cb652e71",
+        "base_revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
+        "temperature": 2.5343690298472983,
+        "code_commit": "7ac6bab261bd97efc3d446152999e94ae432e5b0",
+        "max_length": 16384
+      },
+      "execution": {
+        "mode": "frozen_base_fsdp2",
+        "world_size": 4,
+        "backend": "nccl",
+        "node_shared_with_other_jobs": true,
+        "candidate_batch_size": 1,
+        "http_server_started": false
+      },
+      "timing_comparable": false,
+      "timing_note": "Four-rank frozen-base FSDP2 execution on a shared node; one observation per task. Timing starts after dispatch and includes collective prediction, rank validation and response validation. No HTTP/network timing, warmups or retries. These diagnostics are not comparable to the old single-GPU HTTP latency, matched-hardware speedups, throughput or energy efficiency.",
+      "source_report": "reports/new27b-jevbench-20260922/report.json",
+      "source_report_sha256": "9a78ffb3aecb113e26bf4d83fd5ad7467141e3bdf84535e90ba71d634ec2a85d",
+      "model_url": "https://huggingface.co/ZefanCai/Open-Jev-27B-v1.1"
     },
     {
       "id": "jev",
@@ -2674,20 +2857,35 @@
       "status": "passed",
       "artifact": "hosted-raw-replay-audit.json",
       "sha256": "0bd587ad999154a3d91dcca2311218462d1d0822bbbfca4d11923d3f5f7d4daa"
+    },
+    "new27b": {
+      "status": "passed",
+      "artifact": "reports/new27b-jevbench-20260922/audit.json",
+      "sha256": "0759d6d9d457e0b823f823d8d9e7b7c9f0f4f3a9278f6cd32aac1e7b442392fc"
     }
   },
   "next_stage": {
-    "status": "being_prepared",
-    "description": "A new 27B training iteration with more diverse training data is being prepared.",
-    "new_27b_training_resumed": false,
-    "new_27b_training_completed": false,
-    "note": "The results above use the already released 2B/9B baselines and hosted models."
+    "status": "27b_v1.1_audited",
+    "new_27b_training_completed": true,
+    "new_2b_training": "stopped",
+    "new_9b_training": "not_started",
+    "note": "Released 2B/9B remain separate historical checkpoints; their expanded-set evaluations are pending."
   },
   "method_url": "https://github.com/Zefan-Cai/Open-Jev/blob/main/docs/jevbench-public.md",
-  "report_url": "https://github.com/Zefan-Cai/Open-Jev/blob/main/reports/jevbench-public-20260921/baseline-summary.json",
+  "report_url": "https://github.com/Zefan-Cai/Open-Jev/blob/main/site/jevbench.json",
   "notes": [
-    "This evaluates the already released 2B and 9B adapters and decision heads; these are not newly trained checkpoints.",
+    "The released 2B/9B adapters are preserved alongside the newly audited 27B v1.1 checkpoint.",
     "The 231-task public subset is separate from the existing 76-case provider comparison and release-v2 test/OOD evaluation.",
-    "No raw task text, states, labels, task IDs, provider responses, credentials, or absolute node paths are exported."
-  ]
+    "No raw task text, states, labels, task IDs, provider responses, credentials, or absolute node paths are exported.",
+    "27B scored 197/231 and 80/111 Hard, three overall and one Hard behind Jev. Its four-rank direct-execution timings are not comparable to HTTP/HTTPS latency."
+  ],
+  "baseline_generated_at": "2026-09-21T06:27:47.369104+00:00",
+  "publication_date": "2026-09-23",
+  "full_internal_audit": {
+    "status": "passed_complete_full24_audit",
+    "publishable": true,
+    "checkpoint_sha256": "c49994563c3c4f04a99d9130203c4e526f4ae5086c84deec57698d18cb652e71",
+    "report_path": "reports/new27b-internal-full-20260923/report.json",
+    "report_sha256": "19a154c1a6ed3935bac266ab04b8a395bc180739540127b4b3802190e3c34f97"
+  }
 }

@@ -1,5 +1,5 @@
 {
-  "scope": "Completed release-v2 checkpoint evaluation; broader prepared inventory is separate.",
+  "scope": "Audited released 2B/9B release-v2 evaluation and 27B v1.1 full internal evaluation; old and expanded panels overlap. Prepared inventory is separate.",
   "evaluation_models": [
     {
       "model": "Qwen/Qwen3.5-2B",
@@ -714,6 +714,88 @@
       }
     }
   ],
+  "full_internal_models": [
+    {
+      "model": "Open-Jev-27B-v1.1",
+      "checkpoint": {
+        "model": "Qwen/Qwen3.8-27B",
+        "base_revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
+        "checkpoint_sha256": "c49994563c3c4f04a99d9130203c4e526f4ae5086c84deec57698d18cb652e71",
+        "temperature": 2.5343690298472983,
+        "lora_rank": 8,
+        "base_weights_included": false
+      },
+      "status": "passed_complete_full24_audit",
+      "publishable": true,
+      "audit_path": "reports/new27b-internal-full-20260923/report.json",
+      "audit_sha256": "19a154c1a6ed3935bac266ab04b8a395bc180739540127b4b3802190e3c34f97",
+      "coverage": {
+        "total": 127787,
+        "successful": 127787,
+        "failed": 0,
+        "missing": 0,
+        "duplicates": 0,
+        "imported": 4491,
+        "new": 123296,
+        "completed_groups": 6,
+        "owned_processes_remaining": 0
+      },
+      "panels": {
+        "old_test": {
+          "count": 10532,
+          "hard_count": 10046,
+          "soft_count": 486,
+          "hard_correct": 9876,
+          "accuracy": 0.9830778419271352,
+          "expected_accuracy": 0.954681027079432,
+          "nll": 0.13386432263131773,
+          "brier": 0.03458594885426232,
+          "expected_brier": 0.06263691316614574,
+          "multiclass_ece": 0.029161848979411622,
+          "ece_bins": 15
+        },
+        "expanded_test": {
+          "count": 43301,
+          "hard_count": 42789,
+          "soft_count": 512,
+          "hard_correct": 41357,
+          "accuracy": 0.966533454859894,
+          "expected_accuracy": 0.9595090315974361,
+          "nll": 0.12983825446990038,
+          "brier": 0.05746167254927552,
+          "expected_brier": 0.06460776054107147,
+          "multiclass_ece": 0.037463708716989785,
+          "ece_bins": 15
+        },
+        "old_ood": {
+          "count": 15920,
+          "hard_count": 15446,
+          "soft_count": 474,
+          "hard_correct": 14825,
+          "accuracy": 0.9597954162890069,
+          "expected_accuracy": 0.9430203212128463,
+          "nll": 0.15887220783486702,
+          "brier": 0.06296576556098005,
+          "expected_brier": 0.08029650520798853,
+          "multiclass_ece": 0.024102283529718986,
+          "ece_bins": 15
+        },
+        "expanded_ood": {
+          "count": 84486,
+          "hard_count": 83924,
+          "soft_count": 562,
+          "hard_correct": 80934,
+          "accuracy": 0.9643725275249034,
+          "expected_accuracy": 0.9606666609107841,
+          "nll": 0.13434172410803066,
+          "brier": 0.060333553335607484,
+          "expected_brier": 0.06415555195289763,
+          "multiclass_ece": 0.01820277638023621,
+          "ece_bins": 15
+        }
+      }
+    }
+  ],
   "prepared_inventory": {
     "corpora": [
       {
@@ -864,8 +946,9 @@
     "Hard accuracy excludes 960 soft-target rows per model; expected accuracy includes all rows.",
     "Synthetic controlled decision accuracy is not an end-to-end task or gameplay success rate.",
     "No full-data base-model baseline was run; no full-data training gain is claimed.",
-    "27B final evaluation and final-model JF100/service suites are pending.",
-    "The new corpora have not been used to retrain the released models; new-domain Open-Jev evaluation remains pending.",
-    "JF100 is a separate holdout: 100 questions with three option rotations."
+    "The 27B v1.1 full internal audit covers 127,787 rows, including 1,074 soft-target rows; its old-release panels are unchanged-content subsets of the expanded panels.",
+    "Released 2B/9B expanded-set evaluations remain pending. New 2B training stopped; new 9B training did not start. Final-model JF100/service suites remain pending.",
+    "JF100 is a separate holdout: 100 questions with three option rotations.",
+    "Shared multi-GPU evaluation times are not single-GPU or HTTP/API latency measurements."
   ]
 }

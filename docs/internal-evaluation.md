@@ -2,6 +2,12 @@
 
 Internal evaluation uses held-out rows, not the rows consumed by the fine-tuning optimizer. Related views of the same source scenario stay in one split. These checks establish separation within our prepared datasets; they do not establish that the foundation model never encountered similar material during pretraining or that every semantic paraphrase has been excluded.
 
+## Completed 27B v1.1 full evaluation
+
+The [complete internal audit](internal-full-evaluation.md) passed for all **127,787** expanded Test/OOD rows, with zero failed, missing or duplicate predictions. It reports four distinct panels: Old Test (10,532 rows), Old OOD (15,920), Expanded Test (43,301), and Expanded OOD (84,486). Old rows are content-identical subsets of expanded rows, so the panels overlap. Hard accuracy excludes soft targets; probability metrics include every row.
+
+The audited 27B uses its saved calibration temperature, a 4,096-token limit without truncation, row batch size one and cache off. The old 512-row trainer diagnostics below are separate sampled comparisons. The V2–V3 focus panel and group-macro reporting described below are prepared protocols, not completed v1.1 measurements. New 2B training stopped and new 9B training did not start.
+
 ## Trainer evaluation and training loss
 
 The current four-rank, final-checkpoint recipe separates the following roles:
@@ -48,4 +54,4 @@ Internal test/OOD data often share a dataset or generation grammar with training
 
 The **231 pinned public JevBench tasks** are a separate external comparison, evaluated after final completion using their own documented protocol. They are not training examples, calibration rows or checkpoint-selection criteria in this recipe. This is the available public subset, not a claim to evaluate all 534 JevBench tasks. External results and internal results should be reported separately with their own denominators. See the [JevBench protocol and limitations](jevbench-public.md).
 
-None of the prepared-data counts or the addition of group-macro reporting is a new model-quality result. New results require completed runs and the independent post-run audit.
+Prepared-data counts and planned group-macro reporting do not establish a model-quality result. The completed v1.1 measurements are the audited full internal and public JevBench results linked above; future checkpoints require their own completed runs and independent audits.

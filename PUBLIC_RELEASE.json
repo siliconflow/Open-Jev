@@ -8,6 +8,16 @@
   "files_scope": "Current release payload except PUBLIC_RELEASE.json; initial manifest preserved under release/history.",
   "files": [
     {
+      "path": ".dockerignore",
+      "sha256": "1048e1e8163b4c7cad0ce427ccb624e9a3d23e50df5ad5b75b78bda349c2f3e1",
+      "source_sha256": "1048e1e8163b4c7cad0ce427ccb624e9a3d23e50df5ad5b75b78bda349c2f3e1",
+      "bytes": 315,
+      "source_commit": "7d57c968053320c215ff039092d2305d6deea330",
+      "changes": [
+        "Reviewed community Docker deployment and opt-in consumer GPU support, with CPU integration regressions; contributor GPU measurements remain separate from audited release results."
+      ]
+    },
+    {
       "path": ".gitattributes",
       "source_sha256": "f478996e3a8144cbe0a13c29ab07557ef889323f997ecbb727830416bd191ea0",
       "sha256": "f478996e3a8144cbe0a13c29ab07557ef889323f997ecbb727830416bd191ea0",
@@ -23,6 +33,16 @@
       ]
     },
     {
+      "path": "Dockerfile",
+      "sha256": "18af4cb3187888b44ed14bf2cb2bca5387f72279943a37fb7133b844787fa120",
+      "source_sha256": "18af4cb3187888b44ed14bf2cb2bca5387f72279943a37fb7133b844787fa120",
+      "bytes": 5051,
+      "source_commit": "7d57c968053320c215ff039092d2305d6deea330",
+      "changes": [
+        "Reviewed community Docker deployment and opt-in consumer GPU support, with CPU integration regressions; contributor GPU measurements remain separate from audited release results."
+      ]
+    },
+    {
       "path": "LICENSE",
       "source_sha256": "ef2f6f6db605a2f611bc2d037c59276f615cdea76ac6e7551a28f71db890c9d2",
       "sha256": "ef2f6f6db605a2f611bc2d037c59276f615cdea76ac6e7551a28f71db890c9d2",
@@ -30,14 +50,18 @@
     },
     {
       "path": "README.md",
-      "source_sha256": "e7067bf770aab5a340ed562f42b63151ea7d6f169d692c0789b9296c5b1cd0c2",
-      "sha256": "d23ae0946c01e25e3d591a8a711eed0c2e7c9447348d3fbb5e1dbfab849ae363",
-      "bytes": 17421,
+      "source_sha256": "67d980c37100383d5bd37cd1194a0cbbe54449060cdc2221d2c31869a80bd5d7",
+      "sha256": "67d980c37100383d5bd37cd1194a0cbbe54449060cdc2221d2c31869a80bd5d7",
+      "bytes": 26952,
       "changes": [
-        "Preserve custom public README; add broader-data and project-story links and verified initialization status.",
-        "Preserve custom public README; record verified optimizer updates and prepared v3 data, frozen evaluation panel and unmeasured status.",
-        "Readable research-project presentation, unified benchmark index and explicit resource links; original scientific JSON and media preserved."
-      ]
+        "English website and workbench presentation. Original evidence, model identities and scientific scores preserved.",
+        "Reviewed community Docker deployment and opt-in consumer GPU support, with CPU integration regressions; contributor GPU measurements remain separate from audited release results.",
+        "Prominent Open-Jev-27B-v1.1 launch page, benchmark poster and edited playback of two audited CC0 synthetic model-output records; published metrics and released-model workbench identity preserved.",
+        "Record the verified Open-Jev-27B-v1.1 chart, demo video and poster reply, anonymous publication checks, and merged contributor pull requests.",
+        "Use canonical Open-Jev-2B and Open-Jev-9B names in README prose; numeric results unchanged.",
+        "Add four interactive game decision demos from 16 audited Open-Jev-27B-v1.1 snapshots with all 74 probabilities and three reference-policy disagreements; record the separately authorized public page invitation."
+      ],
+      "source_commit": "85c8465c2dd4e0463a301451e7942da9423d05f5"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -68,6 +92,75 @@
       ]
     },
     {
+      "path": "deploy/huggingface-space/Dockerfile",
+      "sha256": "edd9c22512437b81243f3839db89292b5f6e009cbb4a924a6172b2b5190e963b",
+      "bytes": 1541,
+      "source_sha256": "edd9c22512437b81243f3839db89292b5f6e009cbb4a924a6172b2b5190e963b",
+      "changes": [
+        "English website and workbench presentation. Original evidence, model identities and scientific scores preserved."
+      ],
+      "source_commit": "cbaa163a295b769aa0ab84fe6369ca733318d13a"
+    },
+    {
+      "path": "deploy/huggingface-space/README.md",
+      "sha256": "0734c5c8ab9abd74a54b616da4a00808feb3690d98faca918331ecd747a4e321",
+      "bytes": 6361,
+      "source_sha256": "0734c5c8ab9abd74a54b616da4a00808feb3690d98faca918331ecd747a4e321",
+      "changes": [
+        "English website and workbench presentation. Original evidence, model identities and scientific scores preserved."
+      ],
+      "source_commit": "cbaa163a295b769aa0ab84fe6369ca733318d13a"
+    },
+    {
+      "path": "deploy/huggingface-space/app.py",
+      "sha256": "ecaea3069b310712e91c412ed9e8d74381e3ea0a71951eec9fa531b023062171",
+      "bytes": 12583,
+      "source_sha256": "ecaea3069b310712e91c412ed9e8d74381e3ea0a71951eec9fa531b023062171",
+      "changes": [
+        "No-code text/CSV classification workbench; no new benchmark results."
+      ]
+    },
+    {
+      "path": "docker-compose.yml",
+      "sha256": "1f1c23b98b227005faa518e68938cfbe0ae884f1a9db736895a92eab5a6095a6",
+      "source_sha256": "1f1c23b98b227005faa518e68938cfbe0ae884f1a9db736895a92eab5a6095a6",
+      "bytes": 2792,
+      "source_commit": "7d57c968053320c215ff039092d2305d6deea330",
+      "changes": [
+        "Reviewed community Docker deployment and opt-in consumer GPU support, with CPU integration regressions; contributor GPU measurements remain separate from audited release results."
+      ]
+    },
+    {
+      "path": "docker/README.md",
+      "sha256": "ef7533ece17ad05b0af7b2d7052d794656f3470ec92db86d0fd5fc4e333a6569",
+      "source_sha256": "ef7533ece17ad05b0af7b2d7052d794656f3470ec92db86d0fd5fc4e333a6569",
+      "bytes": 6722,
+      "source_commit": "7d57c968053320c215ff039092d2305d6deea330",
+      "changes": [
+        "Reviewed community Docker deployment and opt-in consumer GPU support, with CPU integration regressions; contributor GPU measurements remain separate from audited release results."
+      ]
+    },
+    {
+      "path": "docker/entrypoint.sh",
+      "sha256": "e7c9d0d72ad9bf18d5c632ae57a16eeeaaf3b857ae7919cc343baa4ba4e16513",
+      "source_sha256": "e7c9d0d72ad9bf18d5c632ae57a16eeeaaf3b857ae7919cc343baa4ba4e16513",
+      "bytes": 1956,
+      "source_commit": "7d57c968053320c215ff039092d2305d6deea330",
+      "changes": [
+        "Reviewed community Docker deployment and opt-in consumer GPU support, with CPU integration regressions; contributor GPU measurements remain separate from audited release results."
+      ]
+    },
+    {
+      "path": "docker/fetch_models.py",
+      "sha256": "0ddd64cfc415b5bca84de40f4e7c9b795d63089edbb8f7aeaa1e99c9d509dd04",
+      "source_sha256": "0ddd64cfc415b5bca84de40f4e7c9b795d63089edbb8f7aeaa1e99c9d509dd04",
+      "bytes": 4622,
+      "source_commit": "7d57c968053320c215ff039092d2305d6deea330",
+      "changes": [
+        "Reviewed community Docker deployment and opt-in consumer GPU support, with CPU integration regressions; contributor GPU measurements remain separate from audited release results."
+      ]
+    },
+    {
       "path": "docs/amount-extraction-control.md",
       "source_sha256": "e15666754377b289f216264698c36a5821a5a2ba0a2511cd313e80f70ef79df9",
       "sha256": "e15666754377b289f216264698c36a5821a5a2ba0a2511cd313e80f70ef79df9",
@@ -78,6 +171,18 @@
       "source_sha256": "6c90b160180ca3d71fd9c0232293f6d57a9effd23bf07e0f6364442985ce9a93",
       "sha256": "6c90b160180ca3d71fd9c0232293f6d57a9effd23bf07e0f6364442985ce9a93",
       "bytes": 10628
+    },
+    {
+      "path": "docs/benchmarks.md",
+      "source_sha256": "e55e219c59cd2fb34351740b53f0fe1758f7c056adcefe67c293e586e04cdfba",
+      "source_origin": "Authored in the public checkout from preserved published reports; no private source file at the baseline source commit.",
+      "sha256": "e55e219c59cd2fb34351740b53f0fe1758f7c056adcefe67c293e586e04cdfba",
+      "bytes": 12056,
+      "changes": [
+        "Audited 27B v1.1 complete evaluation and verified HF model/data release.",
+        "Record the verified Open-Jev-27B-v1.1 chart, demo video and poster reply, anonymous publication checks, and merged contributor pull requests."
+      ],
+      "source_commit": "024117708e43688e7e5c5a715c5ac032f3b32431"
     },
     {
       "path": "docs/browser-data.md",
@@ -122,6 +227,12 @@
       "bytes": 6535
     },
     {
+      "path": "docs/community-hard-training-v3.md",
+      "source_sha256": "711f92869df5a41c8998e7746de867c2fc52e018571e51eb18c9fa0e253487db",
+      "sha256": "711f92869df5a41c8998e7746de867c2fc52e018571e51eb18c9fa0e253487db",
+      "bytes": 7188
+    },
+    {
       "path": "docs/community-research-20260920.md",
       "sha256": "689670eb2bf4b34144f42bc032d67dadd03e638c0fc6c852d6150f6f307b908c",
       "bytes": 13621,
@@ -145,10 +256,32 @@
       "bytes": 16584
     },
     {
+      "path": "docs/community-routing-v3.md",
+      "source_sha256": "8ed833a5c0bd468159911efc704a192cd91fcc8e3e61770aca95c96c390a95db",
+      "sha256": "8ed833a5c0bd468159911efc704a192cd91fcc8e3e61770aca95c96c390a95db",
+      "bytes": 9354
+    },
+    {
+      "path": "docs/community-workflow-v3.md",
+      "source_sha256": "df842498a04f5893bf578750e1b42ee8505d0ae531c8e2c6576ec96e6850e183",
+      "sha256": "df842498a04f5893bf578750e1b42ee8505d0ae531c8e2c6576ec96e6850e183",
+      "bytes": 7809
+    },
+    {
       "path": "docs/community.md",
       "source_sha256": "f582a794a047508a99e957181fa4888b3ecf7abe7aeba7a5f0bf25df3ee0188c",
       "sha256": "f582a794a047508a99e957181fa4888b3ecf7abe7aeba7a5f0bf25df3ee0188c",
       "bytes": 7531
+    },
+    {
+      "path": "docs/consumer-gpu.md",
+      "sha256": "3797bbfc806a8d87aa236fff71574dad6195a0071cc47e2fe1a89752aa30591d",
+      "source_sha256": "3797bbfc806a8d87aa236fff71574dad6195a0071cc47e2fe1a89752aa30591d",
+      "bytes": 12910,
+      "source_commit": "7d57c968053320c215ff039092d2305d6deea330",
+      "changes": [
+        "Reviewed community Docker deployment and opt-in consumer GPU support, with CPU integration regressions; contributor GPU measurements remain separate from audited release results."
+      ]
     },
     {
       "path": "docs/contact-amount-service-followup.md",
@@ -244,9 +377,23 @@
     },
     {
       "path": "docs/games.md",
-      "source_sha256": "fb5a9d8ff136071d030720ba02ba0eada58a2000ab03165dca37841230669723",
-      "sha256": "fb5a9d8ff136071d030720ba02ba0eada58a2000ab03165dca37841230669723",
-      "bytes": 20586
+      "source_sha256": "f6eb8af814a44cf582fc3fbe36028cc8caf814c094a5f04652db84886e2c9cc7",
+      "sha256": "f6eb8af814a44cf582fc3fbe36028cc8caf814c094a5f04652db84886e2c9cc7",
+      "bytes": 21734,
+      "source_commit": "85c8465c2dd4e0463a301451e7942da9423d05f5",
+      "changes": [
+        "Add four interactive game decision demos from 16 audited Open-Jev-27B-v1.1 snapshots with all 74 probabilities and three reference-policy disagreements; record the separately authorized public page invitation."
+      ]
+    },
+    {
+      "path": "docs/get-started.md",
+      "sha256": "106b024bb753c62b212fa6ce8adbc659ae56258e1f870f98aa05cbd8333999a2",
+      "bytes": 7625,
+      "source_sha256": "106b024bb753c62b212fa6ce8adbc659ae56258e1f870f98aa05cbd8333999a2",
+      "changes": [
+        "English website and workbench presentation. Original evidence, model identities and scientific scores preserved."
+      ],
+      "source_commit": "cbaa163a295b769aa0ab84fe6369ca733318d13a"
     },
     {
       "path": "docs/inference-latency.md",
@@ -256,6 +403,26 @@
       "source_sha256": "bdb4ab119d482b9a70d4beb923dfd9eb5f1666533fcc0754eedc75df77db6305",
       "changes": [
         "Verified community/provider-comparison follow-up; public projection where documented."
+      ]
+    },
+    {
+      "path": "docs/internal-evaluation.md",
+      "source_sha256": "a2ddcf7d14b28edfd83ff205b5c3091c0e63fde155c33a28784d8a9d306225f1",
+      "sha256": "a2ddcf7d14b28edfd83ff205b5c3091c0e63fde155c33a28784d8a9d306225f1",
+      "bytes": 8336,
+      "source_commit": "19d1a5bb04b1b61d7cae1e8440cd2afdfdeccd8d",
+      "changes": [
+        "Audited 27B v1.1 complete evaluation and verified HF model/data release."
+      ]
+    },
+    {
+      "path": "docs/internal-full-evaluation.md",
+      "source_sha256": "05e9546c47edfd84bab6732d7940b97db9f84709e4ea75cc0cdd9037fd16c7f9",
+      "sha256": "05e9546c47edfd84bab6732d7940b97db9f84709e4ea75cc0cdd9037fd16c7f9",
+      "bytes": 5627,
+      "source_commit": "19d1a5bb04b1b61d7cae1e8440cd2afdfdeccd8d",
+      "changes": [
+        "Audited 27B v1.1 complete evaluation and verified HF model/data release."
       ]
     },
     {
@@ -270,10 +437,13 @@
     },
     {
       "path": "docs/jevbench-public.md",
-      "sha256": "accf5d503bea826bd264b17c4ea8af98ef7f8649f371b3bacbf22f3b7db49f2d",
-      "bytes": 8610,
-      "source_commit": "43a29babd7e6aa25bef17e690a45325bed6b4ec1",
-      "source_sha256": "accf5d503bea826bd264b17c4ea8af98ef7f8649f371b3bacbf22f3b7db49f2d"
+      "sha256": "783fd3a95669d7a35c8e2f238cab21ffcf8d956270e34ff5f189ec9a7beae25e",
+      "bytes": 10213,
+      "source_commit": "19d1a5bb04b1b61d7cae1e8440cd2afdfdeccd8d",
+      "source_sha256": "783fd3a95669d7a35c8e2f238cab21ffcf8d956270e34ff5f189ec9a7beae25e",
+      "changes": [
+        "Audited 27B v1.1 complete evaluation and verified HF model/data release."
+      ]
     },
     {
       "path": "docs/latency.md",
@@ -456,6 +626,12 @@
       ]
     },
     {
+      "path": "docs/sql-semantics-v3.md",
+      "source_sha256": "ed995257576de0ac3eb3651cdb52bba9410a045f1a531e70c5b540f90d7803a1",
+      "sha256": "ed995257576de0ac3eb3651cdb52bba9410a045f1a531e70c5b540f90d7803a1",
+      "bytes": 6735
+    },
+    {
       "path": "docs/training-coverage-gaps.md",
       "source_sha256": "60165eded83e3cff19cad0e41d3eaac02ba7cbfaec6afb55e5dee2971874afe9",
       "sha256": "60165eded83e3cff19cad0e41d3eaac02ba7cbfaec6afb55e5dee2971874afe9",
@@ -623,9 +799,13 @@
     },
     {
       "path": "examples/index.html",
-      "source_sha256": "8770569b785771b83e1acb22e3b4b89d08ff2157396fcc5bc506c147e266ab7c",
-      "sha256": "8770569b785771b83e1acb22e3b4b89d08ff2157396fcc5bc506c147e266ab7c",
-      "bytes": 5672
+      "source_sha256": "3d14a3e6fc970a10498415503eab23148460ed0666806522dd40ca05e7784031",
+      "sha256": "3d14a3e6fc970a10498415503eab23148460ed0666806522dd40ca05e7784031",
+      "bytes": 5739,
+      "changes": [
+        "English website and workbench presentation. Original evidence, model identities and scientific scores preserved."
+      ],
+      "source_commit": "cbaa163a295b769aa0ab84fe6369ca733318d13a"
     },
     {
       "path": "examples/painting/app.mjs",
@@ -772,6 +952,45 @@
       "bytes": 497
     },
     {
+      "path": "examples/workbench/app.js",
+      "sha256": "5b35c4b0c46ba1158ec501d81472fd5e6661f096c33f93cbbcf3d4159104fcf0",
+      "bytes": 11377,
+      "source_sha256": "5b35c4b0c46ba1158ec501d81472fd5e6661f096c33f93cbbcf3d4159104fcf0",
+      "changes": [
+        "English website and workbench presentation. Original evidence, model identities and scientific scores preserved."
+      ],
+      "source_commit": "cbaa163a295b769aa0ab84fe6369ca733318d13a"
+    },
+    {
+      "path": "examples/workbench/index.html",
+      "sha256": "8992244c55a1d1f568f0c7665e4b193ee87075aaa0f08286d7241752eadef66d",
+      "bytes": 11494,
+      "source_sha256": "8992244c55a1d1f568f0c7665e4b193ee87075aaa0f08286d7241752eadef66d",
+      "changes": [
+        "English website and workbench presentation. Original evidence, model identities and scientific scores preserved."
+      ],
+      "source_commit": "cbaa163a295b769aa0ab84fe6369ca733318d13a"
+    },
+    {
+      "path": "examples/workbench/logic.mjs",
+      "sha256": "62115c035855c23841d544bc8c7d5b8b3ab0e145612b9461293d176febdcba0d",
+      "bytes": 7508,
+      "source_sha256": "62115c035855c23841d544bc8c7d5b8b3ab0e145612b9461293d176febdcba0d",
+      "changes": [
+        "English website and workbench presentation. Original evidence, model identities and scientific scores preserved."
+      ],
+      "source_commit": "cbaa163a295b769aa0ab84fe6369ca733318d13a"
+    },
+    {
+      "path": "examples/workbench/styles.css",
+      "sha256": "cea28d2dce23e6fc5f430f0c14a3a562cd23230b6de8ebc1de0e6fad2418419d",
+      "bytes": 18837,
+      "source_sha256": "cea28d2dce23e6fc5f430f0c14a3a562cd23230b6de8ebc1de0e6fad2418419d",
+      "changes": [
+        "No-code text/CSV classification workbench; no new benchmark results."
+      ]
+    },
+    {
       "path": "examples/workflows/agent_trace_observability.json",
       "source_sha256": "a099cf0102f7deefe5d11738ba647406d64d48f0bb62038e36d18d916892b710",
       "sha256": "a099cf0102f7deefe5d11738ba647406d64d48f0bb62038e36d18d916892b710",
@@ -908,6 +1127,18 @@
       "bytes": 62711
     },
     {
+      "path": "jev/community_routing_v3.py",
+      "source_sha256": "75dfd7d1742cea78cbb28e1788b8544e526f47727b5c1796c59c5a25c3674bd4",
+      "sha256": "75dfd7d1742cea78cbb28e1788b8544e526f47727b5c1796c59c5a25c3674bd4",
+      "bytes": 19773
+    },
+    {
+      "path": "jev/community_workflow_v3.py",
+      "source_sha256": "e7e4bc911787ff37d3a8c8553f26e6168a4c1cc77fd787de6f17876d467fb4c2",
+      "sha256": "e7e4bc911787ff37d3a8c8553f26e6168a4c1cc77fd787de6f17876d467fb4c2",
+      "bytes": 35140
+    },
+    {
       "path": "jev/context_retention_data.py",
       "sha256": "b3a9e163fbc3c78343be99cf3465e6433933df05b4e0ec209d2da22331e14678",
       "bytes": 16620,
@@ -936,6 +1167,16 @@
       "bytes": 24603
     },
     {
+      "path": "jev/eval_resources.py",
+      "source_sha256": "eb0f03370963a620aa6a706815cfb1b6f62ff07891415d02539520208be6c803",
+      "sha256": "e4cc82d948d4363b36c2d890fc78442f5aa677895a774cbd2a7301cff4466521",
+      "bytes": 17849,
+      "source_commit": "19d1a5bb04b1b61d7cae1e8440cd2afdfdeccd8d",
+      "changes": [
+        "Private hardware identities replaced by inert explicit-configuration placeholders; original frozen source SHA retained."
+      ]
+    },
+    {
       "path": "jev/game_cli.py",
       "source_sha256": "6c1d98c14944396236709ddf3f72c8957bd5ac1964e222a804eb0af9393588f4",
       "sha256": "6c1d98c14944396236709ddf3f72c8957bd5ac1964e222a804eb0af9393588f4",
@@ -946,6 +1187,16 @@
       "source_sha256": "5b7ac9f459bd86a724b39c7c2f87f8e8d7441a28aa7a7f14ef0fe94366544afe",
       "sha256": "5b7ac9f459bd86a724b39c7c2f87f8e8d7441a28aa7a7f14ef0fe94366544afe",
       "bytes": 50657
+    },
+    {
+      "path": "jev/inference_initialization.py",
+      "source_sha256": "fd17e3c8b786c79dc290255dd3f6f8a37d1c244cd1805e97e2483dc1225f4f1d",
+      "sha256": "fd17e3c8b786c79dc290255dd3f6f8a37d1c244cd1805e97e2483dc1225f4f1d",
+      "bytes": 9798,
+      "source_commit": "19d1a5bb04b1b61d7cae1e8440cd2afdfdeccd8d",
+      "changes": [
+        "Audited 27B v1.1 complete evaluation and verified HF model/data release."
+      ]
     },
     {
       "path": "jev/ir_data.py",
@@ -1011,9 +1262,13 @@
     },
     {
       "path": "jev/model.py",
-      "source_sha256": "500cedc059878de5070e8589aabe12d13d2df1065b703ab803f8b0928f64d7cc",
-      "sha256": "500cedc059878de5070e8589aabe12d13d2df1065b703ab803f8b0928f64d7cc",
-      "bytes": 5786
+      "source_sha256": "32358106d4d7cc4a71ccbf90dcc3d20664691d3707790faff76889813716d06e",
+      "sha256": "32358106d4d7cc4a71ccbf90dcc3d20664691d3707790faff76889813716d06e",
+      "bytes": 16037,
+      "source_commit": "7d57c968053320c215ff039092d2305d6deea330",
+      "changes": [
+        "Reviewed community Docker deployment and opt-in consumer GPU support, with CPU integration regressions; contributor GPU measurements remain separate from audited release results."
+      ]
     },
     {
       "path": "jev/painting.py",
@@ -1029,9 +1284,13 @@
     },
     {
       "path": "jev/prefix_cache.py",
-      "source_sha256": "9edad06a54414c342b222ea5bf01a2a69caec6362c2f1107da93a99110821b19",
-      "sha256": "9edad06a54414c342b222ea5bf01a2a69caec6362c2f1107da93a99110821b19",
-      "bytes": 9479
+      "source_sha256": "0d81aad6e1d4c3228d9aa7bb09d01f94953656ced34ac4537743e5e1b9b39443",
+      "sha256": "0d81aad6e1d4c3228d9aa7bb09d01f94953656ced34ac4537743e5e1b9b39443",
+      "bytes": 16058,
+      "source_commit": "7d57c968053320c215ff039092d2305d6deea330",
+      "changes": [
+        "Reviewed community Docker deployment and opt-in consumer GPU support, with CPU integration regressions; contributor GPU measurements remain separate from audited release results."
+      ]
     },
     {
       "path": "jev/public_data.py",
@@ -1047,15 +1306,38 @@
     },
     {
       "path": "jev/server.py",
-      "source_sha256": "932aee18e81f9fc3d7a534f7a22f497c97bc45935626331e5452557d00b97ee1",
-      "sha256": "932aee18e81f9fc3d7a534f7a22f497c97bc45935626331e5452557d00b97ee1",
-      "bytes": 6458
+      "source_sha256": "0632bbdb0092cd4e8ad1dc7ee4aaaa95ae03fbfb60475939c80231f78eb6616a",
+      "sha256": "0632bbdb0092cd4e8ad1dc7ee4aaaa95ae03fbfb60475939c80231f78eb6616a",
+      "bytes": 6823,
+      "changes": [
+        "No-code text/CSV classification workbench; no new benchmark results."
+      ]
     },
     {
       "path": "jev/serving.py",
       "source_sha256": "c801af2867613ff978931c4c127ef063f9eab52074c9eb871e00b523d702eec9",
       "sha256": "c801af2867613ff978931c4c127ef063f9eab52074c9eb871e00b523d702eec9",
       "bytes": 7823
+    },
+    {
+      "path": "jev/sharded_model.py",
+      "source_sha256": "203ccce480104a3741058ad069ea243688d1e34aafdf6af214e64db7b6fb178b",
+      "sha256": "203ccce480104a3741058ad069ea243688d1e34aafdf6af214e64db7b6fb178b",
+      "bytes": 13702,
+      "source_commit": "19d1a5bb04b1b61d7cae1e8440cd2afdfdeccd8d",
+      "changes": [
+        "Audited 27B v1.1 complete evaluation and verified HF model/data release."
+      ]
+    },
+    {
+      "path": "jev/shared_resources.py",
+      "source_sha256": "e910e6e556c8a4e1f6f404f7ae19ed8d5ad8bceb82e792f2b137498c4a989b48",
+      "sha256": "0386cb2988be1a8fcf937bc8b8de7a11b4f2d865724c7e68ef5e4e136514986d",
+      "bytes": 24680,
+      "source_commit": "19d1a5bb04b1b61d7cae1e8440cd2afdfdeccd8d",
+      "changes": [
+        "Private hardware identities replaced by inert explicit-configuration placeholders; original frozen source SHA retained."
+      ]
     },
     {
       "path": "jev/silent_failure_data.py",
@@ -1068,6 +1350,12 @@
       ]
     },
     {
+      "path": "jev/sql_semantics_v3.py",
+      "source_sha256": "9f3cf5436c5fcb94845207967d4b9e1a5f90ffdb221803389bb62db33dc0ced3",
+      "sha256": "9f3cf5436c5fcb94845207967d4b9e1a5f90ffdb221803389bb62db33dc0ced3",
+      "bytes": 33985
+    },
+    {
       "path": "jev/train.py",
       "source_sha256": "f94d444e77a79c0bf1f20ca7587a036ff0a28a7112c72dc3b6a1edea2c9f8eef",
       "sha256": "f94d444e77a79c0bf1f20ca7587a036ff0a28a7112c72dc3b6a1edea2c9f8eef",
@@ -1075,9 +1363,13 @@
     },
     {
       "path": "jev/train_distributed.py",
-      "source_sha256": "faf7e1869d33608af8f32103c174cab2bdb7bc8ce304e18fc561f21a3626dbfc",
-      "sha256": "faf7e1869d33608af8f32103c174cab2bdb7bc8ce304e18fc561f21a3626dbfc",
-      "bytes": 35934
+      "source_sha256": "f730dff37d9eddb452541078afbd8070414757c1bd03eb6c6c2ab3d5797f32c2",
+      "sha256": "f730dff37d9eddb452541078afbd8070414757c1bd03eb6c6c2ab3d5797f32c2",
+      "bytes": 37903,
+      "source_commit": "19d1a5bb04b1b61d7cae1e8440cd2afdfdeccd8d",
+      "changes": [
+        "Audited 27B v1.1 complete evaluation and verified HF model/data release."
+      ]
     },
     {
       "path": "jev/wanli_data.py",
@@ -1098,6 +1390,246 @@
       "bytes": 640
     },
     {
+      "path": "release/community-pr-integration-20260923.json",
+      "sha256": "f27a379593c1e33d7e8f913a7516705f8d3e9e4ca9a5be3d44a7912a42281ddb",
+      "source_sha256": "f27a379593c1e33d7e8f913a7516705f8d3e9e4ca9a5be3d44a7912a42281ddb",
+      "bytes": 5029,
+      "source_commit": "7d57c968053320c215ff039092d2305d6deea330",
+      "changes": [
+        "Reviewed community Docker deployment and opt-in consumer GPU support, with CPU integration regressions; contributor GPU measurements remain separate from audited release results."
+      ]
+    },
+    {
+      "path": "release/community-pr-merged-20260923.json",
+      "source_sha256": "f24e00085067b6007fcbe8e87db7d14ffb9cbeea84cacf7f31c8e02052b5cd4d",
+      "sha256": "f24e00085067b6007fcbe8e87db7d14ffb9cbeea84cacf7f31c8e02052b5cd4d",
+      "bytes": 908,
+      "source_commit": "024117708e43688e7e5c5a715c5ac032f3b32431",
+      "changes": [
+        "Record the verified Open-Jev-27B-v1.1 chart, demo video and poster reply, anonymous publication checks, and merged contributor pull requests."
+      ]
+    },
+    {
+      "path": "release/demos/v1.1-confirmation-gate-20260923/README.md",
+      "sha256": "69c92ba441b8f65cd361ccdd317d2afa5e37a5dd3a82f753f055ede58b5a90cb",
+      "source_sha256": "69c92ba441b8f65cd361ccdd317d2afa5e37a5dd3a82f753f055ede58b5a90cb",
+      "bytes": 3865,
+      "source_commit": "c7fa2524ebe529042a45d453a95c7d68840ab7ca",
+      "changes": [
+        "Prominent Open-Jev-27B-v1.1 launch page, benchmark poster and edited playback of two audited CC0 synthetic model-output records; published metrics and released-model workbench identity preserved."
+      ]
+    },
+    {
+      "path": "release/demos/v1.1-confirmation-gate-20260923/captions.vtt",
+      "sha256": "ea12029f2024dec954b8ebe91def7fb522c1335031df1b9b83cdfa9f6b65e341",
+      "source_sha256": "ea12029f2024dec954b8ebe91def7fb522c1335031df1b9b83cdfa9f6b65e341",
+      "bytes": 962,
+      "source_commit": "c7fa2524ebe529042a45d453a95c7d68840ab7ca",
+      "changes": [
+        "Prominent Open-Jev-27B-v1.1 launch page, benchmark poster and edited playback of two audited CC0 synthetic model-output records; published metrics and released-model workbench identity preserved."
+      ]
+    },
+    {
+      "path": "release/demos/v1.1-confirmation-gate-20260923/contact-sheet.jpg",
+      "sha256": "7a621c83ca3ae8ee1e8acd6f25d96e495991943ef044ff2862c564dce21af131",
+      "source_sha256": "7a621c83ca3ae8ee1e8acd6f25d96e495991943ef044ff2862c564dce21af131",
+      "bytes": 271398,
+      "source_commit": "c7fa2524ebe529042a45d453a95c7d68840ab7ca",
+      "changes": [
+        "Prominent Open-Jev-27B-v1.1 launch page, benchmark poster and edited playback of two audited CC0 synthetic model-output records; published metrics and released-model workbench identity preserved."
+      ]
+    },
+    {
+      "path": "release/demos/v1.1-confirmation-gate-20260923/evidence.json",
+      "sha256": "a4c08e3abdd9dd4ca105270cccd55a583fd0a7f38a1dbd8b0d991f64d099ce84",
+      "source_sha256": "a4c08e3abdd9dd4ca105270cccd55a583fd0a7f38a1dbd8b0d991f64d099ce84",
+      "bytes": 19212,
+      "source_commit": "c7fa2524ebe529042a45d453a95c7d68840ab7ca",
+      "changes": [
+        "Prominent Open-Jev-27B-v1.1 launch page, benchmark poster and edited playback of two audited CC0 synthetic model-output records; published metrics and released-model workbench identity preserved."
+      ]
+    },
+    {
+      "path": "release/demos/v1.1-confirmation-gate-20260923/frame-01.png",
+      "sha256": "b201ae4d585fe69bf8a88020dcd5c090a7a0e563dac48c83c55ab478175fa333",
+      "source_sha256": "b201ae4d585fe69bf8a88020dcd5c090a7a0e563dac48c83c55ab478175fa333",
+      "bytes": 74932,
+      "source_commit": "c7fa2524ebe529042a45d453a95c7d68840ab7ca",
+      "changes": [
+        "Prominent Open-Jev-27B-v1.1 launch page, benchmark poster and edited playback of two audited CC0 synthetic model-output records; published metrics and released-model workbench identity preserved."
+      ]
+    },
+    {
+      "path": "release/demos/v1.1-confirmation-gate-20260923/frame-07.png",
+      "sha256": "249c10c229861584484d883b634df2c38e7e80e39692550dd363278af1dc745b",
+      "source_sha256": "249c10c229861584484d883b634df2c38e7e80e39692550dd363278af1dc745b",
+      "bytes": 91814,
+      "source_commit": "c7fa2524ebe529042a45d453a95c7d68840ab7ca",
+      "changes": [
+        "Prominent Open-Jev-27B-v1.1 launch page, benchmark poster and edited playback of two audited CC0 synthetic model-output records; published metrics and released-model workbench identity preserved."
+      ]
+    },
+    {
+      "path": "release/demos/v1.1-confirmation-gate-20260923/frame-12.png",
+      "sha256": "20b60da7134a25e73a168b280c1aea2322e9f7b4ca81352f0e4daa34d1721444",
+      "source_sha256": "20b60da7134a25e73a168b280c1aea2322e9f7b4ca81352f0e4daa34d1721444",
+      "bytes": 75741,
+      "source_commit": "c7fa2524ebe529042a45d453a95c7d68840ab7ca",
+      "changes": [
+        "Prominent Open-Jev-27B-v1.1 launch page, benchmark poster and edited playback of two audited CC0 synthetic model-output records; published metrics and released-model workbench identity preserved."
+      ]
+    },
+    {
+      "path": "release/demos/v1.1-confirmation-gate-20260923/frame-20.png",
+      "sha256": "e3b50147962f5fb422d7b51be9dec840d330b2324c2280181be9dccb92b172fe",
+      "source_sha256": "e3b50147962f5fb422d7b51be9dec840d330b2324c2280181be9dccb92b172fe",
+      "bytes": 94333,
+      "source_commit": "c7fa2524ebe529042a45d453a95c7d68840ab7ca",
+      "changes": [
+        "Prominent Open-Jev-27B-v1.1 launch page, benchmark poster and edited playback of two audited CC0 synthetic model-output records; published metrics and released-model workbench identity preserved."
+      ]
+    },
+    {
+      "path": "release/demos/v1.1-confirmation-gate-20260923/frame-26.png",
+      "sha256": "e7f194d29e5705b584cab9779e7c90df335e7369e70a74c5798322d5be2ea337",
+      "source_sha256": "e7f194d29e5705b584cab9779e7c90df335e7369e70a74c5798322d5be2ea337",
+      "bytes": 69109,
+      "source_commit": "c7fa2524ebe529042a45d453a95c7d68840ab7ca",
+      "changes": [
+        "Prominent Open-Jev-27B-v1.1 launch page, benchmark poster and edited playback of two audited CC0 synthetic model-output records; published metrics and released-model workbench identity preserved."
+      ]
+    },
+    {
+      "path": "release/demos/v1.1-confirmation-gate-20260923/frame-30.png",
+      "sha256": "907276dad651b1ad6fecdbfa841e79f2fc174831c196ac2827a2b4442699a0cd",
+      "source_sha256": "907276dad651b1ad6fecdbfa841e79f2fc174831c196ac2827a2b4442699a0cd",
+      "bytes": 56461,
+      "source_commit": "c7fa2524ebe529042a45d453a95c7d68840ab7ca",
+      "changes": [
+        "Prominent Open-Jev-27B-v1.1 launch page, benchmark poster and edited playback of two audited CC0 synthetic model-output records; published metrics and released-model workbench identity preserved."
+      ]
+    },
+    {
+      "path": "release/demos/v1.1-confirmation-gate-20260923/index.html",
+      "sha256": "69e994590e7ec39591e6f88376ad1a9732d5e350f8ab5040385b624114752fb2",
+      "source_sha256": "69e994590e7ec39591e6f88376ad1a9732d5e350f8ab5040385b624114752fb2",
+      "bytes": 13138,
+      "source_commit": "c7fa2524ebe529042a45d453a95c7d68840ab7ca",
+      "changes": [
+        "Prominent Open-Jev-27B-v1.1 launch page, benchmark poster and edited playback of two audited CC0 synthetic model-output records; published metrics and released-model workbench identity preserved."
+      ]
+    },
+    {
+      "path": "release/demos/v1.1-confirmation-gate-20260923/manifest.json",
+      "sha256": "01ee2f1f61706e6c5b680a1bbe87811439e5005257fc01700da51691e58dc563",
+      "source_sha256": "01ee2f1f61706e6c5b680a1bbe87811439e5005257fc01700da51691e58dc563",
+      "bytes": 2713,
+      "source_commit": "c7fa2524ebe529042a45d453a95c7d68840ab7ca",
+      "changes": [
+        "Prominent Open-Jev-27B-v1.1 launch page, benchmark poster and edited playback of two audited CC0 synthetic model-output records; published metrics and released-model workbench identity preserved."
+      ]
+    },
+    {
+      "path": "release/demos/v1.1-confirmation-gate-20260923/poster.jpg",
+      "sha256": "44285bf2a2384cdd22e6eaaacbb55a60d448e76974a2b264c50c339f44800eca",
+      "source_sha256": "44285bf2a2384cdd22e6eaaacbb55a60d448e76974a2b264c50c339f44800eca",
+      "bytes": 119313,
+      "source_commit": "c7fa2524ebe529042a45d453a95c7d68840ab7ca",
+      "changes": [
+        "Prominent Open-Jev-27B-v1.1 launch page, benchmark poster and edited playback of two audited CC0 synthetic model-output records; published metrics and released-model workbench identity preserved."
+      ]
+    },
+    {
+      "path": "release/demos/v1.1-confirmation-gate-20260923/poster.png",
+      "sha256": "e29b6de76fe48783d9f67e3556342894ac6b870811f4869da96af1062b8e5d00",
+      "source_sha256": "e29b6de76fe48783d9f67e3556342894ac6b870811f4869da96af1062b8e5d00",
+      "bytes": 74921,
+      "source_commit": "c7fa2524ebe529042a45d453a95c7d68840ab7ca",
+      "changes": [
+        "Prominent Open-Jev-27B-v1.1 launch page, benchmark poster and edited playback of two audited CC0 synthetic model-output records; published metrics and released-model workbench identity preserved."
+      ]
+    },
+    {
+      "path": "release/demos/v1.1-confirmation-gate-20260923/render-receipt.json",
+      "sha256": "db3acaafd9d53c489e01e32ea19c8cbf3418638885803a403f880f04e69cd418",
+      "source_sha256": "db3acaafd9d53c489e01e32ea19c8cbf3418638885803a403f880f04e69cd418",
+      "bytes": 2548,
+      "source_commit": "c7fa2524ebe529042a45d453a95c7d68840ab7ca",
+      "changes": [
+        "Prominent Open-Jev-27B-v1.1 launch page, benchmark poster and edited playback of two audited CC0 synthetic model-output records; published metrics and released-model workbench identity preserved."
+      ]
+    },
+    {
+      "path": "release/demos/v1.1-confirmation-gate-20260923/render.py",
+      "sha256": "e723e54c2488068fff8f324d24e7023413723a5f0a508c98b607fca6e069065d",
+      "source_sha256": "e723e54c2488068fff8f324d24e7023413723a5f0a508c98b607fca6e069065d",
+      "bytes": 11649,
+      "source_commit": "c7fa2524ebe529042a45d453a95c7d68840ab7ca",
+      "changes": [
+        "Prominent Open-Jev-27B-v1.1 launch page, benchmark poster and edited playback of two audited CC0 synthetic model-output records; published metrics and released-model workbench identity preserved."
+      ]
+    },
+    {
+      "path": "release/demos/v1.1-confirmation-gate-20260923/replay.mp4",
+      "sha256": "70deec71219ab0db44ecdd90751f2e6d24b23215458f8da2502f6a5809357ece",
+      "source_sha256": "70deec71219ab0db44ecdd90751f2e6d24b23215458f8da2502f6a5809357ece",
+      "bytes": 954817,
+      "source_commit": "c7fa2524ebe529042a45d453a95c7d68840ab7ca",
+      "changes": [
+        "Prominent Open-Jev-27B-v1.1 launch page, benchmark poster and edited playback of two audited CC0 synthetic model-output records; published metrics and released-model workbench identity preserved."
+      ]
+    },
+    {
+      "path": "release/demos/v1.1-confirmation-gate-20260923/script.md",
+      "sha256": "e21fe8b1a6ede7ba7f43a9a27f7a22d325d3575e54f96e0b9a3d823ba9bcbe10",
+      "source_sha256": "e21fe8b1a6ede7ba7f43a9a27f7a22d325d3575e54f96e0b9a3d823ba9bcbe10",
+      "bytes": 1237,
+      "source_commit": "c7fa2524ebe529042a45d453a95c7d68840ab7ca",
+      "changes": [
+        "Prominent Open-Jev-27B-v1.1 launch page, benchmark poster and edited playback of two audited CC0 synthetic model-output records; published metrics and released-model workbench identity preserved."
+      ]
+    },
+    {
+      "path": "release/demos/v1.1-confirmation-gate-20260923/source-records.jsonl",
+      "sha256": "eb4dd1dcb29203045d032dd32c3248f8aec656de5d583580f80a3c752f5d6ed7",
+      "source_sha256": "eb4dd1dcb29203045d032dd32c3248f8aec656de5d583580f80a3c752f5d6ed7",
+      "bytes": 7942,
+      "source_commit": "c7fa2524ebe529042a45d453a95c7d68840ab7ca",
+      "changes": [
+        "Prominent Open-Jev-27B-v1.1 launch page, benchmark poster and edited playback of two audited CC0 synthetic model-output records; published metrics and released-model workbench identity preserved."
+      ]
+    },
+    {
+      "path": "release/demos/v1.1-confirmation-gate-20260923/verify.py",
+      "sha256": "f01b96dae5730446e8b565f46ecd76aaa36f78f8598523a1a1a889b2cd4e0e0c",
+      "source_sha256": "f01b96dae5730446e8b565f46ecd76aaa36f78f8598523a1a1a889b2cd4e0e0c",
+      "bytes": 2809,
+      "source_commit": "c7fa2524ebe529042a45d453a95c7d68840ab7ca",
+      "changes": [
+        "Prominent Open-Jev-27B-v1.1 launch page, benchmark poster and edited playback of two audited CC0 synthetic model-output records; published metrics and released-model workbench identity preserved."
+      ]
+    },
+    {
+      "path": "release/english-ui-20260923.json",
+      "sha256": "1729aa26e71a5a47ebffb574d0a5a6f669f6c18365d2027121da45c8539e719e",
+      "bytes": 24582,
+      "source_sha256": "1729aa26e71a5a47ebffb574d0a5a6f669f6c18365d2027121da45c8539e719e",
+      "source_commit": "1d811da3d677070e642782fad76a4e630320ddec",
+      "changes": [
+        "Verified live English website and workbench; original models, scores and raw evidence preserved."
+      ]
+    },
+    {
+      "path": "release/game-arcade-20260923.json",
+      "sha256": "4e7bb1d7642d888f74284cdce8f92af8aa5df052b1e9d79b9856f1e1eb70f4cf",
+      "source_sha256": "4e7bb1d7642d888f74284cdce8f92af8aa5df052b1e9d79b9856f1e1eb70f4cf",
+      "source_commit": "85c8465c2dd4e0463a301451e7942da9423d05f5",
+      "bytes": 3165,
+      "changes": [
+        "Add four interactive game decision demos from 16 audited Open-Jev-27B-v1.1 snapshots with all 74 probabilities and three reference-policy disagreements; record the separately authorized public page invitation."
+      ]
+    },
+    {
       "path": "release/history/PUBLIC_RELEASE.initial.json",
       "sha256": "948cc26de8d28577bfd984cc597949fd89b134e37028260d874f6ed9191b3f2a",
       "bytes": 284858,
@@ -1108,21 +1640,60 @@
     },
     {
       "path": "release/project-story/index.html",
-      "source_sha256": "3ffeeccad07a87aa10c273757332d749408fe37eae099d5471ba95f4469f8a3d",
-      "sha256": "ee04a16654a9c81069e941fd0b285872eed46bbe78af26c49790311d7ca5949f",
-      "bytes": 57791,
+      "source_sha256": "4ee0ffe20c48f98bbc91508b6cf883332ed9c25d97366616f358239c4fd1bb56",
+      "sha256": "4ee0ffe20c48f98bbc91508b6cf883332ed9c25d97366616f358239c4fd1bb56",
+      "bytes": 63566,
       "changes": [
-        "Readable research-project presentation, unified benchmark index and explicit resource links; original scientific JSON and media preserved."
+        "English website and workbench presentation. Original evidence, model identities and scientific scores preserved."
+      ],
+      "source_commit": "cbaa163a295b769aa0ab84fe6369ca733318d13a"
+    },
+    {
+      "path": "release/social/27b-chart-20260923/publication.json",
+      "source_sha256": "368f6b0eb5ca0c53ecfbc8b5e470d15e63ebf40328654da398167bc9457050cc",
+      "sha256": "368f6b0eb5ca0c53ecfbc8b5e470d15e63ebf40328654da398167bc9457050cc",
+      "bytes": 3111,
+      "source_commit": "024117708e43688e7e5c5a715c5ac032f3b32431",
+      "changes": [
+        "Record the verified Open-Jev-27B-v1.1 chart, demo video and poster reply, anonymous publication checks, and merged contributor pull requests."
       ]
     },
     {
-      "path": "release/social/README.md",
-      "sha256": "6a2a9722da4d8a7de96805983fc5c57072f9c23a7c5e1b280edb7d7e38376852",
-      "bytes": 3037,
-      "source_commit": "fa5af88462e6096b5a84d57885eedeac244fee00",
-      "source_sha256": "6a2a9722da4d8a7de96805983fc5c57072f9c23a7c5e1b280edb7d7e38376852",
+      "path": "release/social/27b-demo-20260923/publication.json",
+      "source_sha256": "acf527462fbdee1c77761d849ece9693678469e422b65bf1cecf0d6e1f35d917",
+      "sha256": "acf527462fbdee1c77761d849ece9693678469e422b65bf1cecf0d6e1f35d917",
+      "bytes": 7956,
+      "source_commit": "024117708e43688e7e5c5a715c5ac032f3b32431",
       "changes": [
-        "Verified provider reference-match comparison, label audit, data publication and website follow-up."
+        "Record the verified Open-Jev-27B-v1.1 chart, demo video and poster reply, anonymous publication checks, and merged contributor pull requests."
+      ]
+    },
+    {
+      "path": "release/social/27b-page-20260923/publication.json",
+      "sha256": "4cb36ca28550cefdace32df103223755a9f3f1e3c1fffe17d8413ab27f467006",
+      "source_sha256": "4cb36ca28550cefdace32df103223755a9f3f1e3c1fffe17d8413ab27f467006",
+      "source_commit": "85c8465c2dd4e0463a301451e7942da9423d05f5",
+      "bytes": 1393,
+      "changes": [
+        "Add four interactive game decision demos from 16 audited Open-Jev-27B-v1.1 snapshots with all 74 probabilities and three reference-policy disagreements; record the separately authorized public page invitation."
+      ]
+    },
+    {
+      "path": "release/social/27b-rewritten-20260923/publication.json",
+      "source_sha256": "8872d3d1e5356cc1160f04d8a4a25357c97a5917c1a9e6f7f211c67786f58a0f",
+      "sha256": "8872d3d1e5356cc1160f04d8a4a25357c97a5917c1a9e6f7f211c67786f58a0f",
+      "bytes": 9290
+    },
+    {
+      "path": "release/social/README.md",
+      "sha256": "a17d26eee852fc50c4310af95d73fde107a72898c713fdf310c6b7b384e7fd58",
+      "bytes": 4298,
+      "source_commit": "85c8465c2dd4e0463a301451e7942da9423d05f5",
+      "source_sha256": "a17d26eee852fc50c4310af95d73fde107a72898c713fdf310c6b7b384e7fd58",
+      "changes": [
+        "Verified provider reference-match comparison, label audit, data publication and website follow-up.",
+        "Record the verified Open-Jev-27B-v1.1 chart, demo video and poster reply, anonymous publication checks, and merged contributor pull requests.",
+        "Add four interactive game decision demos from 16 audited Open-Jev-27B-v1.1 snapshots with all 74 probabilities and three reference-policy disagreements; record the separately authorized public page invitation."
       ]
     },
     {
@@ -1263,6 +1834,27 @@
       "source_sha256": "38b059f64fd89d3a5c18be6bc35124875a1f45ee058153a6a9b18e2327295027",
       "changes": [
         "Verified provider reference-match comparison, label audit, data publication and website follow-up."
+      ]
+    },
+    {
+      "path": "release/v1.1-promotion-20260923.json",
+      "sha256": "227129befed939f1866b8cf5c0ef63154427aef4454bd9845d3f9b5897c2a0d5",
+      "source_sha256": "227129befed939f1866b8cf5c0ef63154427aef4454bd9845d3f9b5897c2a0d5",
+      "bytes": 3919,
+      "source_commit": "024117708e43688e7e5c5a715c5ac032f3b32431",
+      "changes": [
+        "Prominent Open-Jev-27B-v1.1 launch page, benchmark poster and edited playback of two audited CC0 synthetic model-output records; published metrics and released-model workbench identity preserved.",
+        "Record the verified Open-Jev-27B-v1.1 chart, demo video and poster reply, anonymous publication checks, and merged contributor pull requests."
+      ]
+    },
+    {
+      "path": "release/v1.1-promotion-online-20260923.json",
+      "source_sha256": "2cf0f5ee5cc6f441653a9c9dc6e3e999f6ee30f052fb0380d3eb8860630e97bb",
+      "sha256": "2cf0f5ee5cc6f441653a9c9dc6e3e999f6ee30f052fb0380d3eb8860630e97bb",
+      "bytes": 3864,
+      "source_commit": "024117708e43688e7e5c5a715c5ac032f3b32431",
+      "changes": [
+        "Record the verified Open-Jev-27B-v1.1 chart, demo video and poster reply, anonymous publication checks, and merged contributor pull requests."
       ]
     },
     {
@@ -1743,6 +2335,60 @@
       "bytes": 1962
     },
     {
+      "path": "reports/community-diversity-v3/audit_integration.py",
+      "source_sha256": "d53a7e9d5325edda8036a747ae2ad40c31334bbd1def82f2baf908ea8ac38588",
+      "sha256": "d53a7e9d5325edda8036a747ae2ad40c31334bbd1def82f2baf908ea8ac38588",
+      "bytes": 20918
+    },
+    {
+      "path": "reports/community-diversity-v3/final-overlap-screen.json",
+      "source_sha256": "34abad5ac328e4ae4ebeee69e4c38cca07ca6c56d96a84bffc43c3d4dc60b607",
+      "sha256": "34abad5ac328e4ae4ebeee69e4c38cca07ca6c56d96a84bffc43c3d4dc60b607",
+      "bytes": 1127
+    },
+    {
+      "path": "reports/community-diversity-v3/focus-panel-manifest.json",
+      "source_sha256": "3cd051b48f324cf1d24c6981bed31269a503f12e2e7c0bd203a3391a586c2e8a",
+      "sha256": "3cd051b48f324cf1d24c6981bed31269a503f12e2e7c0bd203a3391a586c2e8a",
+      "bytes": 3938
+    },
+    {
+      "path": "reports/community-diversity-v3/integration-audit.json",
+      "source_sha256": "12e495b31200019f49137c26ca1ea5b78b82e52230e69faf15340596def39505",
+      "sha256": "12e495b31200019f49137c26ca1ea5b78b82e52230e69faf15340596def39505",
+      "bytes": 14768
+    },
+    {
+      "path": "reports/community-diversity-v3/queue-status.json",
+      "source_sha256": "03288db9e9d95f54abc5d000a733b8ab415869cf974ec6a74f02508c5ee35c58",
+      "sha256": "03288db9e9d95f54abc5d000a733b8ab415869cf974ec6a74f02508c5ee35c58",
+      "bytes": 976
+    },
+    {
+      "path": "reports/community-diversity-v3/tokenizer-preflight.json",
+      "source_sha256": "bbb318bde010d18392c8c7ea085c9f60c91438ef6999850c67ff20a10c8662d6",
+      "sha256": "bbb318bde010d18392c8c7ea085c9f60c91438ef6999850c67ff20a10c8662d6",
+      "bytes": 10758
+    },
+    {
+      "path": "reports/community-diversity-v3/training-mixture-manifest.json",
+      "source_sha256": "0c4abb45b9703a18d6e406013ea1f7d2c1f3d355b951d9f98d1875297d0dda05",
+      "sha256": "0c4abb45b9703a18d6e406013ea1f7d2c1f3d355b951d9f98d1875297d0dda05",
+      "bytes": 19277
+    },
+    {
+      "path": "reports/community-diversity-v3/training-plan.json",
+      "source_sha256": "365375ef024f4b47f2fba311e3a25600704058e8c3ee1d32fcac9e080540c6ad",
+      "sha256": "365375ef024f4b47f2fba311e3a25600704058e8c3ee1d32fcac9e080540c6ad",
+      "bytes": 3227
+    },
+    {
+      "path": "reports/community-diversity-v3/validation.json",
+      "source_sha256": "b2d982156674b9c2b8d486727a40260dc7211ff3ef71d89e2eb8797c67a39fa2",
+      "sha256": "b2d982156674b9c2b8d486727a40260dc7211ff3ef71d89e2eb8797c67a39fa2",
+      "bytes": 755
+    },
+    {
       "path": "reports/community-research-20260920/authenticated-x-followup.json",
       "sha256": "4d1f1ad129768519d4b32eb6c2ace123a553996fda09b5e65972dc3b2c5cbaff",
       "bytes": 4720,
@@ -1922,6 +2568,78 @@
       "bytes": 4219,
       "source_sha256": "248e961fc9c2b4ef781e575d4a4a3c165fb194642408c06f7218608fa37856be",
       "source_commit": "1d1f92ae660df0cffbfabb0166d94bd4af57d506"
+    },
+    {
+      "path": "reports/community-routing-v3/cpu-tests.txt",
+      "source_sha256": "4c0f58331c1d0f318a223bc80bf84c1e7afbf430dfa175ddb0dc62e5936c746e",
+      "sha256": "4c0f58331c1d0f318a223bc80bf84c1e7afbf430dfa175ddb0dc62e5936c746e",
+      "bytes": 1478
+    },
+    {
+      "path": "reports/community-routing-v3/data-manifest.json",
+      "source_sha256": "9ec1fdb644fa949e3cc879c335133f18bda3d741eb93183e5154b3616058a57e",
+      "sha256": "9ec1fdb644fa949e3cc879c335133f18bda3d741eb93183e5154b3616058a57e",
+      "bytes": 16862
+    },
+    {
+      "path": "reports/community-routing-v3/full-catalog-eval-only.json",
+      "source_sha256": "5596759515a02c1f7578fb53d58b359bc889534626812b7a40eb337ce1f43d68",
+      "sha256": "5596759515a02c1f7578fb53d58b359bc889534626812b7a40eb337ce1f43d68",
+      "bytes": 181573
+    },
+    {
+      "path": "reports/community-routing-v3/independent_audit.py",
+      "source_sha256": "364a60bed984e9fc969626d78a56431ebaad292c7beee95d144d742ad97ea4d9",
+      "sha256": "364a60bed984e9fc969626d78a56431ebaad292c7beee95d144d742ad97ea4d9",
+      "bytes": 15345
+    },
+    {
+      "path": "reports/community-routing-v3/integrity-audit.json",
+      "source_sha256": "c4571e52c2f640b929e1ccbe7513a959c56ab84d5abb25fd33cbd9be0110801e",
+      "sha256": "c4571e52c2f640b929e1ccbe7513a959c56ab84d5abb25fd33cbd9be0110801e",
+      "bytes": 4929
+    },
+    {
+      "path": "reports/community-routing-v3/source-manifest.json",
+      "source_sha256": "845a0006f8e694fee87c28bada16e26034b3022a344df9c3246a4c93a1726a12",
+      "sha256": "845a0006f8e694fee87c28bada16e26034b3022a344df9c3246a4c93a1726a12",
+      "bytes": 1925
+    },
+    {
+      "path": "reports/community-workflow-v3/README.md",
+      "source_sha256": "711fea29e609a97dd3b813f2fb502075b82058fd64cc61938cd85df3029be29e",
+      "sha256": "711fea29e609a97dd3b813f2fb502075b82058fd64cc61938cd85df3029be29e",
+      "bytes": 1747
+    },
+    {
+      "path": "reports/community-workflow-v3/audit_visible_records.py",
+      "source_sha256": "20006cc94d606994d4e0b0c2bf48931a7a12ed9ae60cb19b3d68d56dd682b78d",
+      "sha256": "20006cc94d606994d4e0b0c2bf48931a7a12ed9ae60cb19b3d68d56dd682b78d",
+      "bytes": 12339
+    },
+    {
+      "path": "reports/community-workflow-v3/independent-audit.json",
+      "source_sha256": "e60e5a3b0a784cae0a6b0344cec44a408653ae22fa993fa509df9fd51afadb83",
+      "sha256": "e60e5a3b0a784cae0a6b0344cec44a408653ae22fa993fa509df9fd51afadb83",
+      "bytes": 1951
+    },
+    {
+      "path": "reports/community-workflow-v3/manifest.json",
+      "source_sha256": "3fc6c0539c1a32325c9d0e0311c308019d4e2afab88d68f12f738ac636572af4",
+      "sha256": "3fc6c0539c1a32325c9d0e0311c308019d4e2afab88d68f12f738ac636572af4",
+      "bytes": 3577
+    },
+    {
+      "path": "reports/community-workflow-v3/validation.json",
+      "source_sha256": "028013dc4faf0096502d3fa698ed0e34aeee5cdfbf658c34e3cc2f9c345585f7",
+      "sha256": "028013dc4faf0096502d3fa698ed0e34aeee5cdfbf658c34e3cc2f9c345585f7",
+      "bytes": 1234
+    },
+    {
+      "path": "reports/community-workflow-v3/visible-input-audit.json",
+      "source_sha256": "86932747737a1e0f83c6645a26b80da1cf0805991cdcf9c05017ac0d0c6277e5",
+      "sha256": "86932747737a1e0f83c6645a26b80da1cf0805991cdcf9c05017ac0d0c6277e5",
+      "bytes": 2482
     },
     {
       "path": "reports/contact-service-eval/capture_tokenizer_lengths.py",
@@ -3205,6 +3923,16 @@
       "bytes": 1455
     },
     {
+      "path": "reports/huggingface-data-v1.1/publication.json",
+      "source_sha256": "5ac88a71cdba8049109276e174aca16001f3d4bfe6360d92bbc360f4880af7d3",
+      "sha256": "5ac88a71cdba8049109276e174aca16001f3d4bfe6360d92bbc360f4880af7d3",
+      "bytes": 7986,
+      "source_commit": "19d1a5bb04b1b61d7cae1e8440cd2afdfdeccd8d",
+      "changes": [
+        "Audited 27B v1.1 complete evaluation and verified HF model/data release."
+      ]
+    },
+    {
       "path": "reports/huggingface-model-release/2b/README.md",
       "source_sha256": "2e0005c57ee7e3fe0f6fff57071314d260fd7978bf72dba70237865bcb4f9538",
       "sha256": "2e0005c57ee7e3fe0f6fff57071314d260fd7978bf72dba70237865bcb4f9538",
@@ -3272,6 +4000,16 @@
       "source_sha256": "6fb4aa69fbb59395a1555deb11b57e8b2c1017e14e6ee24afc2a3bd6f38ad5d4",
       "sha256": "6fb4aa69fbb59395a1555deb11b57e8b2c1017e14e6ee24afc2a3bd6f38ad5d4",
       "bytes": 926
+    },
+    {
+      "path": "reports/huggingface-v1.1/model/publication.json",
+      "source_sha256": "2279c9f9fabb55d2925c511590ba58f8b28f64a80867e8295b54540da225d9b1",
+      "sha256": "2279c9f9fabb55d2925c511590ba58f8b28f64a80867e8295b54540da225d9b1",
+      "bytes": 5835,
+      "source_commit": "19d1a5bb04b1b61d7cae1e8440cd2afdfdeccd8d",
+      "changes": [
+        "Audited 27B v1.1 complete evaluation and verified HF model/data release."
+      ]
     },
     {
       "path": "reports/inference-latency/presentation-qa-20260920/live-publication-verification.json",
@@ -4150,6 +4888,86 @@
       "bytes": 5863,
       "changes": [
         "private network locator replaced with reserved documentation address"
+      ]
+    },
+    {
+      "path": "reports/new27b-internal-full-20260923/README.md",
+      "source_sha256": "c041e774c10b70314a770df8d9e593ad83add5c2f68ef6886315b82d4bafb76c",
+      "sha256": "c041e774c10b70314a770df8d9e593ad83add5c2f68ef6886315b82d4bafb76c",
+      "bytes": 5757,
+      "source_commit": "19d1a5bb04b1b61d7cae1e8440cd2afdfdeccd8d",
+      "changes": [
+        "Audited 27B v1.1 complete evaluation and verified HF model/data release."
+      ]
+    },
+    {
+      "path": "reports/new27b-internal-full-20260923/report.json",
+      "source_sha256": "19a154c1a6ed3935bac266ab04b8a395bc180739540127b4b3802190e3c34f97",
+      "sha256": "19a154c1a6ed3935bac266ab04b8a395bc180739540127b4b3802190e3c34f97",
+      "bytes": 4881,
+      "source_commit": "19d1a5bb04b1b61d7cae1e8440cd2afdfdeccd8d",
+      "changes": [
+        "Audited 27B v1.1 complete evaluation and verified HF model/data release."
+      ]
+    },
+    {
+      "path": "reports/new27b-internal-full-20260923/source-identities.json",
+      "source_sha256": "9865d448b13ae8079bfaa33bf08744c205dbd683ab3f794eda33d3281d954db1",
+      "sha256": "9865d448b13ae8079bfaa33bf08744c205dbd683ab3f794eda33d3281d954db1",
+      "bytes": 3654,
+      "source_commit": "19d1a5bb04b1b61d7cae1e8440cd2afdfdeccd8d",
+      "changes": [
+        "Audited 27B v1.1 complete evaluation and verified HF model/data release."
+      ]
+    },
+    {
+      "path": "reports/new27b-internal-full-20260923/verify.py",
+      "source_sha256": "2eefd11d5010bbe705641f397eec0912992984ca3047631e8a8578eae5d34801",
+      "sha256": "2eefd11d5010bbe705641f397eec0912992984ca3047631e8a8578eae5d34801",
+      "bytes": 25409,
+      "source_commit": "19d1a5bb04b1b61d7cae1e8440cd2afdfdeccd8d",
+      "changes": [
+        "Audited 27B v1.1 complete evaluation and verified HF model/data release."
+      ]
+    },
+    {
+      "path": "reports/new27b-internal-full-20260923/verify_campaign.py",
+      "source_sha256": "c573ff8620e706197008170dc464e4e7a3de6da37fd93df58cc20ae020e8c393",
+      "sha256": "c573ff8620e706197008170dc464e4e7a3de6da37fd93df58cc20ae020e8c393",
+      "bytes": 39499,
+      "source_commit": "19d1a5bb04b1b61d7cae1e8440cd2afdfdeccd8d",
+      "changes": [
+        "Audited 27B v1.1 complete evaluation and verified HF model/data release."
+      ]
+    },
+    {
+      "path": "reports/new27b-jevbench-20260922/README.md",
+      "source_sha256": "cea2c4152708b5039ac577683ca1eaee271819ce79c2711e7b41d5ec8d1706d4",
+      "sha256": "cea2c4152708b5039ac577683ca1eaee271819ce79c2711e7b41d5ec8d1706d4",
+      "bytes": 1703,
+      "source_commit": "19d1a5bb04b1b61d7cae1e8440cd2afdfdeccd8d",
+      "changes": [
+        "Audited 27B v1.1 complete evaluation and verified HF model/data release."
+      ]
+    },
+    {
+      "path": "reports/new27b-jevbench-20260922/audit.json",
+      "source_sha256": "0759d6d9d457e0b823f823d8d9e7b7c9f0f4f3a9278f6cd32aac1e7b442392fc",
+      "sha256": "0759d6d9d457e0b823f823d8d9e7b7c9f0f4f3a9278f6cd32aac1e7b442392fc",
+      "bytes": 5183,
+      "source_commit": "19d1a5bb04b1b61d7cae1e8440cd2afdfdeccd8d",
+      "changes": [
+        "Audited 27B v1.1 complete evaluation and verified HF model/data release."
+      ]
+    },
+    {
+      "path": "reports/new27b-jevbench-20260922/report.json",
+      "source_sha256": "9a78ffb3aecb113e26bf4d83fd5ad7467141e3bdf84535e90ba71d634ec2a85d",
+      "sha256": "9a78ffb3aecb113e26bf4d83fd5ad7467141e3bdf84535e90ba71d634ec2a85d",
+      "bytes": 6685,
+      "source_commit": "19d1a5bb04b1b61d7cae1e8440cd2afdfdeccd8d",
+      "changes": [
+        "Audited 27B v1.1 complete evaluation and verified HF model/data release."
       ]
     },
     {
@@ -6668,6 +7486,16 @@
       "bytes": 40571
     },
     {
+      "path": "reports/site/benchmark-redesign-validation.json",
+      "source_sha256": "eaba74b5dadd463c0153e5ca5ae6fdd16da75a144182347e61a3ef52e50c6689",
+      "source_origin": "Authored in the public checkout from preserved published reports; no private source file at the baseline source commit.",
+      "sha256": "eaba74b5dadd463c0153e5ca5ae6fdd16da75a144182347e61a3ef52e50c6689",
+      "bytes": 5469,
+      "changes": [
+        "Readable research-project presentation, unified benchmark index and explicit resource links; original scientific JSON and media preserved."
+      ]
+    },
+    {
       "path": "reports/site/browser-audit-success-selection.json",
       "source_sha256": "9507f118bd60d42b841f0eede9e55819fbb59978629cd4dc98456c145e15680f",
       "sha256": "9507f118bd60d42b841f0eede9e55819fbb59978629cd4dc98456c145e15680f",
@@ -6761,6 +7589,48 @@
       "source_sha256": "8b4aee98bc30036609401b448671c7bf8ac4e9eedb38a54cb17cf5d0705ebb79",
       "changes": [
         "Verified community/provider-comparison follow-up; public projection where documented."
+      ]
+    },
+    {
+      "path": "reports/sql-semantics-v3/generation-audit.json",
+      "source_sha256": "2d359ee23dd3b8f712008f56a95be483de14d23e06879807883a91dd06691d62",
+      "sha256": "2d359ee23dd3b8f712008f56a95be483de14d23e06879807883a91dd06691d62",
+      "bytes": 1738
+    },
+    {
+      "path": "reports/sql-semantics-v3/independent-replay-audit.json",
+      "source_sha256": "3406f8a946b1d4177730b7aea24a0dfb1e550759aa8be10ca2818ad3196e3340",
+      "sha256": "3406f8a946b1d4177730b7aea24a0dfb1e550759aa8be10ca2818ad3196e3340",
+      "bytes": 1673
+    },
+    {
+      "path": "reports/sql-semantics-v3/independent_audit.py",
+      "source_sha256": "5fe2e96ddd84b27ee43f40ce743f035e7e04fcc994b57b3fcbfd659f53ee8483",
+      "sha256": "5fe2e96ddd84b27ee43f40ce743f035e7e04fcc994b57b3fcbfd659f53ee8483",
+      "bytes": 12904
+    },
+    {
+      "path": "reports/sql-semantics-v3/manifest.json",
+      "source_sha256": "26aa4e0aab6d30c3bb7f77eda0e36e56c8aaaaa8f04ab9aae5a3ff39022b1f8f",
+      "sha256": "26aa4e0aab6d30c3bb7f77eda0e36e56c8aaaaa8f04ab9aae5a3ff39022b1f8f",
+      "bytes": 5449
+    },
+    {
+      "path": "reports/workbench/README.md",
+      "sha256": "7b214fe412b3d7688d8984f37ca19705039c5c2355f65a913c76285b88679357",
+      "source_sha256": "7b214fe412b3d7688d8984f37ca19705039c5c2355f65a913c76285b88679357",
+      "bytes": 1160,
+      "changes": [
+        "Hosted workbench links and verified CPU deployment."
+      ]
+    },
+    {
+      "path": "reports/workbench/validation.json",
+      "sha256": "bd2b3eafcaa12f9b5bbd17b68bd873f140fc29fab1be4d4faa9c149e6736d31a",
+      "source_sha256": "bd2b3eafcaa12f9b5bbd17b68bd873f140fc29fab1be4d4faa9c149e6736d31a",
+      "bytes": 7415,
+      "changes": [
+        "Hosted workbench links and verified CPU deployment."
       ]
     },
     {
@@ -6989,12 +7859,12 @@
     },
     {
       "path": "scripts/build_site_results.py",
-      "sha256": "80a5b2e961fbe079325650fe2aeadfb60f7973e91a08d119881fdd02755e3525",
-      "bytes": 3872,
-      "source_commit": "fa5af88462e6096b5a84d57885eedeac244fee00",
-      "source_sha256": "80a5b2e961fbe079325650fe2aeadfb60f7973e91a08d119881fdd02755e3525",
+      "sha256": "19d824c8593d7a8aa179da8c651307962cb0c0cba87f98e2206364d450a26d71",
+      "bytes": 12244,
+      "source_commit": "19d1a5bb04b1b61d7cae1e8440cd2afdfdeccd8d",
+      "source_sha256": "19d824c8593d7a8aa179da8c651307962cb0c0cba87f98e2206364d450a26d71",
       "changes": [
-        "Verified provider reference-match comparison, label audit, data publication and website follow-up."
+        "Audited 27B v1.1 complete evaluation and verified HF model/data release."
       ]
     },
     {
@@ -7052,6 +7922,12 @@
       "bytes": 37138
     },
     {
+      "path": "scripts/evaluate_community_pair.py",
+      "source_sha256": "3895d23ef44657bcca8dc39e2c82487a286b291d5e2c271da5374a0ce654d2cc",
+      "sha256": "3895d23ef44657bcca8dc39e2c82487a286b291d5e2c271da5374a0ce654d2cc",
+      "bytes": 25569
+    },
+    {
       "path": "scripts/evaluate_contact_service.py",
       "source_sha256": "562dac913d4cebf2732aef9d055dd8dea126c2ec2987573321f1554caf06153a",
       "sha256": "562dac913d4cebf2732aef9d055dd8dea126c2ec2987573321f1554caf06153a",
@@ -7068,6 +7944,26 @@
       "source_sha256": "905da597f90e5d7ad10342640691c6768400c219013b0062a4d7f26ab4affe4e",
       "sha256": "905da597f90e5d7ad10342640691c6768400c219013b0062a4d7f26ab4affe4e",
       "bytes": 15453
+    },
+    {
+      "path": "scripts/evaluate_internal_full.py",
+      "source_sha256": "b436e8f6060acd43c90d53800c9127794ee9546c574d4344c27824f2406612bb",
+      "sha256": "b436e8f6060acd43c90d53800c9127794ee9546c574d4344c27824f2406612bb",
+      "bytes": 23392,
+      "source_commit": "19d1a5bb04b1b61d7cae1e8440cd2afdfdeccd8d",
+      "changes": [
+        "Audited 27B v1.1 complete evaluation and verified HF model/data release."
+      ]
+    },
+    {
+      "path": "scripts/evaluate_internal_shard.py",
+      "source_sha256": "faf8abcf721980ec224b56efa15e422041c19a17ca47e3f0494557e2997cca56",
+      "sha256": "faf8abcf721980ec224b56efa15e422041c19a17ca47e3f0494557e2997cca56",
+      "bytes": 18813,
+      "source_commit": "19d1a5bb04b1b61d7cae1e8440cd2afdfdeccd8d",
+      "changes": [
+        "Audited 27B v1.1 complete evaluation and verified HF model/data release."
+      ]
     },
     {
       "path": "scripts/evaluate_openjev_provider.py",
@@ -7114,16 +8010,33 @@
     },
     {
       "path": "scripts/export_site.py",
-      "source_sha256": "1736e0c1049b37350808ab8e3599b5b0b482c1c06d63e90bb52dc1bc1ca01bcd",
-      "sha256": "1736e0c1049b37350808ab8e3599b5b0b482c1c06d63e90bb52dc1bc1ca01bcd",
-      "bytes": 3066
+      "source_sha256": "fb0c0f5575709cec5c49a952597831a2e808a125090377f4ea1b3c08a89c8ebb",
+      "sha256": "fb0c0f5575709cec5c49a952597831a2e808a125090377f4ea1b3c08a89c8ebb",
+      "bytes": 3084,
+      "source_commit": "c7fa2524ebe529042a45d453a95c7d68840ab7ca",
+      "changes": [
+        "Prominent Open-Jev-27B-v1.1 launch page, benchmark poster and edited playback of two audited CC0 synthetic model-output records; published metrics and released-model workbench identity preserved."
+      ]
+    },
+    {
+      "path": "scripts/internal_eval_campaign.py",
+      "source_sha256": "75d259c1788c5302f752adfda767e028a84f5b74dbe36cf4837b50251c09a107",
+      "sha256": "75d259c1788c5302f752adfda767e028a84f5b74dbe36cf4837b50251c09a107",
+      "bytes": 35614,
+      "source_commit": "19d1a5bb04b1b61d7cae1e8440cd2afdfdeccd8d",
+      "changes": [
+        "Audited 27B v1.1 complete evaluation and verified HF model/data release."
+      ]
     },
     {
       "path": "scripts/jevbench_openjev.py",
-      "sha256": "cf1d6c77f538036d0c9cd230d3bb9150203a9309239e6e25cd05ac8f1cc43dd9",
-      "bytes": 22062,
-      "source_commit": "43a29babd7e6aa25bef17e690a45325bed6b4ec1",
-      "source_sha256": "cf1d6c77f538036d0c9cd230d3bb9150203a9309239e6e25cd05ac8f1cc43dd9"
+      "sha256": "0cee32ab86236cd92e67a7a45ee85f4c108426a88a69d18bbf8ba1e605c3c9a9",
+      "bytes": 22860,
+      "source_commit": "7d57c968053320c215ff039092d2305d6deea330",
+      "source_sha256": "0cee32ab86236cd92e67a7a45ee85f4c108426a88a69d18bbf8ba1e605c3c9a9",
+      "changes": [
+        "Reviewed community Docker deployment and opt-in consumer GPU support, with CPU integration regressions; contributor GPU measurements remain separate from audited release results."
+      ]
     },
     {
       "path": "scripts/launch_expansion.py",
@@ -7177,6 +8090,16 @@
       "source_sha256": "7146698142b8669f5f2934959e4f31f981688626bd129d25fce2b4da38e065ca",
       "sha256": "7146698142b8669f5f2934959e4f31f981688626bd129d25fce2b4da38e065ca",
       "bytes": 11059
+    },
+    {
+      "path": "scripts/render_phone_english.py",
+      "sha256": "e63f5e3eacd209bab2702570373115690f509809d1378e1711347b4676e8acc7",
+      "bytes": 2541,
+      "source_sha256": "e63f5e3eacd209bab2702570373115690f509809d1378e1711347b4676e8acc7",
+      "source_commit": "cbaa163a295b769aa0ab84fe6369ca733318d13a",
+      "changes": [
+        "English website and workbench presentation. Original evidence, model identities and scientific scores preserved."
+      ]
     },
     {
       "path": "scripts/run_four_gpu_handoff.py",
@@ -7268,13 +8191,26 @@
     },
     {
       "path": "site/app.js",
-      "sha256": "1943f9d7947a4be1b3f5ae94873bdbb7bf232da8bd6f7ba8b95462f137aebff3",
-      "bytes": 32859,
-      "source_commit": "bbffb57692164abac0b797f30ed3dcddaf487a1a",
-      "source_sha256": "1943f9d7947a4be1b3f5ae94873bdbb7bf232da8bd6f7ba8b95462f137aebff3",
+      "sha256": "b126e566618d7334dd94fae192394551311f48377b6ee090ef5bb067c30f72e0",
+      "bytes": 31874,
+      "source_commit": "c7fa2524ebe529042a45d453a95c7d68840ab7ca",
+      "source_sha256": "b126e566618d7334dd94fae192394551311f48377b6ee090ef5bb067c30f72e0",
       "changes": [
-        "Audited real Jev TREC strict/scalar results and verified publication; protected post-training continuation code."
+        "English website and workbench presentation. Original evidence, model identities and scientific scores preserved.",
+        "Prominent Open-Jev-27B-v1.1 launch page, benchmark poster and edited playback of two audited CC0 synthetic model-output records; published metrics and released-model workbench identity preserved."
       ]
+    },
+    {
+      "path": "site/benchmarks/index.html",
+      "source_sha256": "ccb3e54501c6ac7fc6f1ec1b1825930173d33d146d1288af50f7c6e51f49fab1",
+      "source_origin": "Authored in the public checkout from preserved published reports; no private source file at the baseline source commit.",
+      "sha256": "ccb3e54501c6ac7fc6f1ec1b1825930173d33d146d1288af50f7c6e51f49fab1",
+      "bytes": 18610,
+      "changes": [
+        "English website and workbench presentation. Original evidence, model identities and scientific scores preserved.",
+        "Prominent Open-Jev-27B-v1.1 launch page, benchmark poster and edited playback of two audited CC0 synthetic model-output records; published metrics and released-model workbench identity preserved."
+      ],
+      "source_commit": "c7fa2524ebe529042a45d453a95c7d68840ab7ca"
     },
     {
       "path": "site/catalog.json",
@@ -7283,27 +8219,97 @@
       "bytes": 2015758
     },
     {
-      "path": "site/index.html",
-      "source_sha256": "0a6253648ed2d354533110aaae39bfadbdbdc241e082d2326169dffda4095785",
-      "sha256": "a771bc362972a437089fc69d0adda431b1383a9cb43694eeaf43e3835fc6ca43",
-      "bytes": 33595,
+      "path": "site/games/app.js",
+      "sha256": "ea1e46d9f9ff3ee76170d676d2db66e6079af03557340689360aa731564d2f34",
+      "source_sha256": "ea1e46d9f9ff3ee76170d676d2db66e6079af03557340689360aa731564d2f34",
+      "source_commit": "85c8465c2dd4e0463a301451e7942da9423d05f5",
+      "bytes": 27305,
       "changes": [
-        "Readable research-project presentation, unified benchmark index and explicit resource links; original scientific JSON and media preserved."
+        "Add four interactive game decision demos from 16 audited Open-Jev-27B-v1.1 snapshots with all 74 probabilities and three reference-policy disagreements; record the separately authorized public page invitation."
       ]
     },
     {
+      "path": "site/games/evidence-verification.json",
+      "sha256": "4786370a3172f660756a361cc58fb6410133fecfad176d4af5fe1a005ebb4a23",
+      "source_sha256": "4786370a3172f660756a361cc58fb6410133fecfad176d4af5fe1a005ebb4a23",
+      "source_commit": "85c8465c2dd4e0463a301451e7942da9423d05f5",
+      "bytes": 860,
+      "changes": [
+        "Add four interactive game decision demos from 16 audited Open-Jev-27B-v1.1 snapshots with all 74 probabilities and three reference-policy disagreements; record the separately authorized public page invitation."
+      ]
+    },
+    {
+      "path": "site/games/evidence.json",
+      "sha256": "13e61d8675094c05951082307727344cdfdd23c0542acba2007394620fd331d5",
+      "source_sha256": "13e61d8675094c05951082307727344cdfdd23c0542acba2007394620fd331d5",
+      "source_commit": "85c8465c2dd4e0463a301451e7942da9423d05f5",
+      "bytes": 91633,
+      "changes": [
+        "Add four interactive game decision demos from 16 audited Open-Jev-27B-v1.1 snapshots with all 74 probabilities and three reference-policy disagreements; record the separately authorized public page invitation."
+      ]
+    },
+    {
+      "path": "site/games/index.html",
+      "sha256": "34a197fcff46f63c6b83dcf668d2960bb346dd7180600113cb5e051e67fe4673",
+      "source_sha256": "34a197fcff46f63c6b83dcf668d2960bb346dd7180600113cb5e051e67fe4673",
+      "source_commit": "85c8465c2dd4e0463a301451e7942da9423d05f5",
+      "bytes": 6847,
+      "changes": [
+        "Add four interactive game decision demos from 16 audited Open-Jev-27B-v1.1 snapshots with all 74 probabilities and three reference-policy disagreements; record the separately authorized public page invitation."
+      ]
+    },
+    {
+      "path": "site/games/source-records.jsonl",
+      "sha256": "2147cc0a765292d683a037a3fa706218dd2b5f098562d2847291d0281b0113dd",
+      "source_sha256": "2147cc0a765292d683a037a3fa706218dd2b5f098562d2847291d0281b0113dd",
+      "source_commit": "85c8465c2dd4e0463a301451e7942da9423d05f5",
+      "bytes": 25562,
+      "changes": [
+        "Add four interactive game decision demos from 16 audited Open-Jev-27B-v1.1 snapshots with all 74 probabilities and three reference-policy disagreements; record the separately authorized public page invitation."
+      ]
+    },
+    {
+      "path": "site/games/styles.css",
+      "sha256": "a92ac73c736bda510939a9883795a36744ceefb2092ca5883f38338989e60f86",
+      "source_sha256": "a92ac73c736bda510939a9883795a36744ceefb2092ca5883f38338989e60f86",
+      "source_commit": "85c8465c2dd4e0463a301451e7942da9423d05f5",
+      "bytes": 17030,
+      "changes": [
+        "Add four interactive game decision demos from 16 audited Open-Jev-27B-v1.1 snapshots with all 74 probabilities and three reference-policy disagreements; record the separately authorized public page invitation."
+      ]
+    },
+    {
+      "path": "site/index.html",
+      "source_sha256": "741ff6b5ad68e36285b90380f84fa3908e651e3a1885a6640be7955604465053",
+      "sha256": "741ff6b5ad68e36285b90380f84fa3908e651e3a1885a6640be7955604465053",
+      "bytes": 38394,
+      "changes": [
+        "English website and workbench presentation. Original evidence, model identities and scientific scores preserved.",
+        "Prominent Open-Jev-27B-v1.1 launch page, benchmark poster and edited playback of two audited CC0 synthetic model-output records; published metrics and released-model workbench identity preserved.",
+        "Add four interactive game decision demos from 16 audited Open-Jev-27B-v1.1 snapshots with all 74 probabilities and three reference-policy disagreements; record the separately authorized public page invitation."
+      ],
+      "source_commit": "85c8465c2dd4e0463a301451e7942da9423d05f5"
+    },
+    {
       "path": "site/jevbench.js",
-      "sha256": "0554ba2ebbc7ca0365b6d86f643615981fe523b2f4c8fbf1888b35385a45fe28",
-      "bytes": 3329,
-      "source_commit": "43a29babd7e6aa25bef17e690a45325bed6b4ec1",
-      "source_sha256": "0554ba2ebbc7ca0365b6d86f643615981fe523b2f4c8fbf1888b35385a45fe28"
+      "sha256": "376e1ba32e28bfe4efdf764afac87b6e615be5b60d61b528d8e58520dc41aecd",
+      "bytes": 5168,
+      "source_commit": "c7fa2524ebe529042a45d453a95c7d68840ab7ca",
+      "source_sha256": "376e1ba32e28bfe4efdf764afac87b6e615be5b60d61b528d8e58520dc41aecd",
+      "changes": [
+        "Audited 27B v1.1 complete evaluation and verified HF model/data release.",
+        "Prominent Open-Jev-27B-v1.1 launch page, benchmark poster and edited playback of two audited CC0 synthetic model-output records; published metrics and released-model workbench identity preserved."
+      ]
     },
     {
       "path": "site/jevbench.json",
-      "sha256": "7b11216fbb1d88213c85dccd36d275e7359b53b27a2720ca551dce8a29085cc2",
-      "bytes": 84623,
-      "source_commit": "43a29babd7e6aa25bef17e690a45325bed6b4ec1",
-      "source_sha256": "7b11216fbb1d88213c85dccd36d275e7359b53b27a2720ca551dce8a29085cc2"
+      "sha256": "1464014d2ff0ccc4b62743fa33592612e1b8e5b6cdb1867242689d11dd8af4d0",
+      "bytes": 91153,
+      "source_commit": "19d1a5bb04b1b61d7cae1e8440cd2afdfdeccd8d",
+      "source_sha256": "1464014d2ff0ccc4b62743fa33592612e1b8e5b6cdb1867242689d11dd8af4d0",
+      "changes": [
+        "Audited 27B v1.1 complete evaluation and verified HF model/data release."
+      ]
     },
     {
       "path": "site/latency-media/open-jev-2b-latency-comparison.jpg",
@@ -7758,6 +8764,56 @@
       "bytes": 612
     },
     {
+      "path": "site/media/phone-extraction-en.jpg",
+      "sha256": "3806cbba6bac62c9bb2474605ebfd3bc891afc1a2f405bd9dc72e1d7dae9340d",
+      "bytes": 103646,
+      "source_sha256": "3806cbba6bac62c9bb2474605ebfd3bc891afc1a2f405bd9dc72e1d7dae9340d",
+      "source_commit": "cbaa163a295b769aa0ab84fe6369ca733318d13a",
+      "changes": [
+        "English website and workbench presentation. Original evidence, model identities and scientific scores preserved."
+      ]
+    },
+    {
+      "path": "site/media/phone-extraction-en.json",
+      "sha256": "f2fc0cde3177f636c0ffe1267e5facc563d3bdfefb289dbd412f989a67235e89",
+      "bytes": 2087,
+      "source_sha256": "f2fc0cde3177f636c0ffe1267e5facc563d3bdfefb289dbd412f989a67235e89",
+      "source_commit": "cbaa163a295b769aa0ab84fe6369ca733318d13a",
+      "changes": [
+        "English website and workbench presentation. Original evidence, model identities and scientific scores preserved."
+      ]
+    },
+    {
+      "path": "site/media/phone-extraction-en.mp4",
+      "sha256": "92630d6162ed68868e40dc694b5f4b87de2b765ea9ac9d1c50a65aae69f6a5c0",
+      "bytes": 89206,
+      "source_sha256": "92630d6162ed68868e40dc694b5f4b87de2b765ea9ac9d1c50a65aae69f6a5c0",
+      "source_commit": "cbaa163a295b769aa0ab84fe6369ca733318d13a",
+      "changes": [
+        "English website and workbench presentation. Original evidence, model identities and scientific scores preserved."
+      ]
+    },
+    {
+      "path": "site/media/phone-extraction-en.txt",
+      "sha256": "c3c1813bb1e375189c977f3c82de411131def526639ad3d01a5d8d123876895b",
+      "bytes": 639,
+      "source_sha256": "c3c1813bb1e375189c977f3c82de411131def526639ad3d01a5d8d123876895b",
+      "source_commit": "cbaa163a295b769aa0ab84fe6369ca733318d13a",
+      "changes": [
+        "English website and workbench presentation. Original evidence, model identities and scientific scores preserved."
+      ]
+    },
+    {
+      "path": "site/media/phone-extraction-en.vtt",
+      "sha256": "792ceabe4972d299d76d0fbbeac16faa591254be209dd79a8365eb0c110c4e5e",
+      "bytes": 649,
+      "source_sha256": "792ceabe4972d299d76d0fbbeac16faa591254be209dd79a8365eb0c110c4e5e",
+      "source_commit": "cbaa163a295b769aa0ab84fe6369ca733318d13a",
+      "changes": [
+        "English website and workbench presentation. Original evidence, model identities and scientific scores preserved."
+      ]
+    },
+    {
       "path": "site/media/phone-extraction.jpg",
       "source_sha256": "92cf5358fd7b5c8913e93122d4ecb74df13ca38a4901dfe7fdf0375eda9e6bae",
       "sha256": "92cf5358fd7b5c8913e93122d4ecb74df13ca38a4901dfe7fdf0375eda9e6bae",
@@ -8009,33 +9065,137 @@
     },
     {
       "path": "site/results.json",
-      "sha256": "c8e8c635ccbaeaea028f79646c7e5f1895cb8d56fd4f1e7cd4ac23323e068acf",
-      "bytes": 31820,
-      "source_commit": "fa5af88462e6096b5a84d57885eedeac244fee00",
-      "source_sha256": "c8e8c635ccbaeaea028f79646c7e5f1895cb8d56fd4f1e7cd4ac23323e068acf",
+      "sha256": "1e3a695428a8fca4db94f9355b04dd99038ce2ac7754210526d0e571c4a945db",
+      "bytes": 34867,
+      "source_commit": "19d1a5bb04b1b61d7cae1e8440cd2afdfdeccd8d",
+      "source_sha256": "1e3a695428a8fca4db94f9355b04dd99038ce2ac7754210526d0e571c4a945db",
       "changes": [
-        "Verified provider reference-match comparison, label audit, data publication and website follow-up."
+        "Audited 27B v1.1 complete evaluation and verified HF model/data release."
       ]
     },
     {
       "path": "site/story/index.html",
-      "source_sha256": "3ffeeccad07a87aa10c273757332d749408fe37eae099d5471ba95f4469f8a3d",
-      "sha256": "ee04a16654a9c81069e941fd0b285872eed46bbe78af26c49790311d7ca5949f",
-      "bytes": 57791,
+      "source_sha256": "d65eb188f7b82500269e0879c7a7d21456e0878e7fd48fc764030e01f1282701",
+      "sha256": "d65eb188f7b82500269e0879c7a7d21456e0878e7fd48fc764030e01f1282701",
+      "bytes": 63575,
       "changes": [
-        "Readable research-project presentation, unified benchmark index and explicit resource links; original scientific JSON and media preserved."
-      ]
+        "English website and workbench presentation. Original evidence, model identities and scientific scores preserved.",
+        "Prominent Open-Jev-27B-v1.1 launch page, benchmark poster and edited playback of two audited CC0 synthetic model-output records; published metrics and released-model workbench identity preserved."
+      ],
+      "source_commit": "c7fa2524ebe529042a45d453a95c7d68840ab7ca"
     },
     {
       "path": "site/styles.css",
-      "sha256": "c94f92913f1a8eabfb4e303c51270ef7c7353b57440a39f7d5db9df4fe037478",
-      "bytes": 31638,
-      "source_commit": "bbffb57692164abac0b797f30ed3dcddaf487a1a",
-      "source_sha256": "a11949cb34f953e17e10becbae514d13b79f708e3c3e63a2b1e1d9d91af11bb9",
+      "sha256": "008039b4600e2a9b76f05180b73a03d217b08e09c0ac7db3817fcafa9df32c39",
+      "bytes": 40694,
+      "source_commit": "85c8465c2dd4e0463a301451e7942da9423d05f5",
+      "source_sha256": "008039b4600e2a9b76f05180b73a03d217b08e09c0ac7db3817fcafa9df32c39",
       "changes": [
-        "Audited real Jev TREC strict/scalar results and verified publication; protected post-training continuation code.",
-        "Readable research-project presentation, unified benchmark index and explicit resource links; original scientific JSON and media preserved."
+        "Audited 27B v1.1 complete evaluation and verified HF model/data release.",
+        "Prominent Open-Jev-27B-v1.1 launch page, benchmark poster and edited playback of two audited CC0 synthetic model-output records; published metrics and released-model workbench identity preserved.",
+        "Add four interactive game decision demos from 16 audited Open-Jev-27B-v1.1 snapshots with all 74 probabilities and three reference-policy disagreements; record the separately authorized public page invitation."
       ]
+    },
+    {
+      "path": "site/v1-1/benchmark-poster.png",
+      "sha256": "578837bea31c380ee4c0bcd23c1b4ddffdda3bc5b5dd2075bdd79ea7e5704f0d",
+      "source_sha256": "578837bea31c380ee4c0bcd23c1b4ddffdda3bc5b5dd2075bdd79ea7e5704f0d",
+      "bytes": 96972,
+      "source_commit": "c7fa2524ebe529042a45d453a95c7d68840ab7ca",
+      "changes": [
+        "Prominent Open-Jev-27B-v1.1 launch page, benchmark poster and edited playback of two audited CC0 synthetic model-output records; published metrics and released-model workbench identity preserved."
+      ]
+    },
+    {
+      "path": "site/v1-1/captions.vtt",
+      "sha256": "ea12029f2024dec954b8ebe91def7fb522c1335031df1b9b83cdfa9f6b65e341",
+      "source_sha256": "ea12029f2024dec954b8ebe91def7fb522c1335031df1b9b83cdfa9f6b65e341",
+      "bytes": 962,
+      "source_commit": "c7fa2524ebe529042a45d453a95c7d68840ab7ca",
+      "changes": [
+        "Prominent Open-Jev-27B-v1.1 launch page, benchmark poster and edited playback of two audited CC0 synthetic model-output records; published metrics and released-model workbench identity preserved."
+      ]
+    },
+    {
+      "path": "site/v1-1/evidence.json",
+      "sha256": "a4c08e3abdd9dd4ca105270cccd55a583fd0a7f38a1dbd8b0d991f64d099ce84",
+      "source_sha256": "a4c08e3abdd9dd4ca105270cccd55a583fd0a7f38a1dbd8b0d991f64d099ce84",
+      "bytes": 19212,
+      "source_commit": "c7fa2524ebe529042a45d453a95c7d68840ab7ca",
+      "changes": [
+        "Prominent Open-Jev-27B-v1.1 launch page, benchmark poster and edited playback of two audited CC0 synthetic model-output records; published metrics and released-model workbench identity preserved."
+      ]
+    },
+    {
+      "path": "site/v1-1/index.html",
+      "sha256": "655d5208ac5b71cee6f43e4b230cb3e95b77f3594aad0e96405139350e5471be",
+      "source_sha256": "655d5208ac5b71cee6f43e4b230cb3e95b77f3594aad0e96405139350e5471be",
+      "bytes": 17832,
+      "source_commit": "85c8465c2dd4e0463a301451e7942da9423d05f5",
+      "changes": [
+        "Prominent Open-Jev-27B-v1.1 launch page, benchmark poster and edited playback of two audited CC0 synthetic model-output records; published metrics and released-model workbench identity preserved.",
+        "Add four interactive game decision demos from 16 audited Open-Jev-27B-v1.1 snapshots with all 74 probabilities and three reference-policy disagreements; record the separately authorized public page invitation."
+      ]
+    },
+    {
+      "path": "site/v1-1/poster.jpg",
+      "sha256": "44285bf2a2384cdd22e6eaaacbb55a60d448e76974a2b264c50c339f44800eca",
+      "source_sha256": "44285bf2a2384cdd22e6eaaacbb55a60d448e76974a2b264c50c339f44800eca",
+      "bytes": 119313,
+      "source_commit": "c7fa2524ebe529042a45d453a95c7d68840ab7ca",
+      "changes": [
+        "Prominent Open-Jev-27B-v1.1 launch page, benchmark poster and edited playback of two audited CC0 synthetic model-output records; published metrics and released-model workbench identity preserved."
+      ]
+    },
+    {
+      "path": "site/v1-1/poster.png",
+      "sha256": "e29b6de76fe48783d9f67e3556342894ac6b870811f4869da96af1062b8e5d00",
+      "source_sha256": "e29b6de76fe48783d9f67e3556342894ac6b870811f4869da96af1062b8e5d00",
+      "bytes": 74921,
+      "source_commit": "c7fa2524ebe529042a45d453a95c7d68840ab7ca",
+      "changes": [
+        "Prominent Open-Jev-27B-v1.1 launch page, benchmark poster and edited playback of two audited CC0 synthetic model-output records; published metrics and released-model workbench identity preserved."
+      ]
+    },
+    {
+      "path": "site/v1-1/replay.mp4",
+      "sha256": "70deec71219ab0db44ecdd90751f2e6d24b23215458f8da2502f6a5809357ece",
+      "source_sha256": "70deec71219ab0db44ecdd90751f2e6d24b23215458f8da2502f6a5809357ece",
+      "bytes": 954817,
+      "source_commit": "c7fa2524ebe529042a45d453a95c7d68840ab7ca",
+      "changes": [
+        "Prominent Open-Jev-27B-v1.1 launch page, benchmark poster and edited playback of two audited CC0 synthetic model-output records; published metrics and released-model workbench identity preserved."
+      ]
+    },
+    {
+      "path": "site/v1-1/script.md",
+      "sha256": "e21fe8b1a6ede7ba7f43a9a27f7a22d325d3575e54f96e0b9a3d823ba9bcbe10",
+      "source_sha256": "e21fe8b1a6ede7ba7f43a9a27f7a22d325d3575e54f96e0b9a3d823ba9bcbe10",
+      "bytes": 1237,
+      "source_commit": "c7fa2524ebe529042a45d453a95c7d68840ab7ca",
+      "changes": [
+        "Prominent Open-Jev-27B-v1.1 launch page, benchmark poster and edited playback of two audited CC0 synthetic model-output records; published metrics and released-model workbench identity preserved."
+      ]
+    },
+    {
+      "path": "site/v1-1/source-records.jsonl",
+      "sha256": "eb4dd1dcb29203045d032dd32c3248f8aec656de5d583580f80a3c752f5d6ed7",
+      "source_sha256": "eb4dd1dcb29203045d032dd32c3248f8aec656de5d583580f80a3c752f5d6ed7",
+      "bytes": 7942,
+      "source_commit": "c7fa2524ebe529042a45d453a95c7d68840ab7ca",
+      "changes": [
+        "Prominent Open-Jev-27B-v1.1 launch page, benchmark poster and edited playback of two audited CC0 synthetic model-output records; published metrics and released-model workbench identity preserved."
+      ]
+    },
+    {
+      "path": "site/workbench/index.html",
+      "sha256": "f77db785b302597efe3bcd8e4df26d8565cf3871f97dd90218ad97611c9fc978",
+      "source_sha256": "f77db785b302597efe3bcd8e4df26d8565cf3871f97dd90218ad97611c9fc978",
+      "bytes": 4699,
+      "changes": [
+        "English website and workbench presentation. Original evidence, model identities and scientific scores preserved."
+      ],
+      "source_commit": "cbaa163a295b769aa0ab84fe6369ca733318d13a"
     },
     {
       "path": "tests/test_amount_extraction_control.py",
@@ -8140,6 +9300,34 @@
       "bytes": 8437
     },
     {
+      "path": "tests/test_community_pair.py",
+      "source_sha256": "4034b3ee465c892ab8da88627096f21634399850c60960a73f2e7a7a4a91faa2",
+      "sha256": "4034b3ee465c892ab8da88627096f21634399850c60960a73f2e7a7a4a91faa2",
+      "bytes": 18396
+    },
+    {
+      "path": "tests/test_community_routing_v3.py",
+      "source_sha256": "46547b7c484e61d2ac6012c5e663558e9e259871d6814b5b8e053c9403a1557e",
+      "sha256": "46547b7c484e61d2ac6012c5e663558e9e259871d6814b5b8e053c9403a1557e",
+      "bytes": 8793
+    },
+    {
+      "path": "tests/test_community_workflow_v3.py",
+      "source_sha256": "f9997f8fb2c851fe2ca0936143b38f15a1cb05613583859e40d6129c4a79ffb2",
+      "sha256": "f9997f8fb2c851fe2ca0936143b38f15a1cb05613583859e40d6129c4a79ffb2",
+      "bytes": 13071
+    },
+    {
+      "path": "tests/test_consumer_gpu_loading.py",
+      "sha256": "c82f351e7bd4abfa27becb1285c5fb8d16eb1a58e2207553c6cc28cce772a7a2",
+      "source_sha256": "c82f351e7bd4abfa27becb1285c5fb8d16eb1a58e2207553c6cc28cce772a7a2",
+      "bytes": 7559,
+      "source_commit": "7d57c968053320c215ff039092d2305d6deea330",
+      "changes": [
+        "Reviewed community Docker deployment and opt-in consumer GPU support, with CPU integration regressions; contributor GPU measurements remain separate from audited release results."
+      ]
+    },
+    {
       "path": "tests/test_contact_service.py",
       "source_sha256": "3606f0727c3983f833d0ddecf9a6d7218f589d99db0682d2502501e20e4e89eb",
       "sha256": "3606f0727c3983f833d0ddecf9a6d7218f589d99db0682d2502501e20e4e89eb",
@@ -8166,6 +9354,16 @@
       "source_sha256": "a19da2862e6e65b99f1b1035ef5ffdb989b2ce5d4f2fc1a43817a797c6e58511",
       "sha256": "a19da2862e6e65b99f1b1035ef5ffdb989b2ce5d4f2fc1a43817a797c6e58511",
       "bytes": 18112
+    },
+    {
+      "path": "tests/test_docker_deployment.py",
+      "sha256": "b89ac84490c452a02ff38fb9158131369e605f869a017193914ed4cb1315bd7b",
+      "source_sha256": "b89ac84490c452a02ff38fb9158131369e605f869a017193914ed4cb1315bd7b",
+      "bytes": 5486,
+      "source_commit": "7d57c968053320c215ff039092d2305d6deea330",
+      "changes": [
+        "Reviewed community Docker deployment and opt-in consumer GPU support, with CPU integration regressions; contributor GPU measurements remain separate from audited release results."
+      ]
     },
     {
       "path": "tests/test_doom_control.py",
@@ -8371,6 +9569,16 @@
       "bytes": 24699
     },
     {
+      "path": "tests/test_prefix_cache_ragged.py",
+      "sha256": "b21962f8083008960c64f7a5f0324fca0beaae0aa53c3af01a243a6463980819",
+      "source_sha256": "b21962f8083008960c64f7a5f0324fca0beaae0aa53c3af01a243a6463980819",
+      "bytes": 3807,
+      "source_commit": "7d57c968053320c215ff039092d2305d6deea330",
+      "changes": [
+        "Reviewed community Docker deployment and opt-in consumer GPU support, with CPU integration regressions; contributor GPU measurements remain separate from audited release results."
+      ]
+    },
+    {
       "path": "tests/test_provider_quality.py",
       "sha256": "30effdf33c4ffc6c8b87409c0f9ee7a1b6c7c0e89ace7bcbc4ec2746dfdc8a41",
       "bytes": 1775,
@@ -8414,9 +9622,12 @@
     },
     {
       "path": "tests/test_serving.py",
-      "source_sha256": "4bb3da885f134e533588aa472fcab3df4cfb1c3f2ba585786c74187a319c694d",
-      "sha256": "4bb3da885f134e533588aa472fcab3df4cfb1c3f2ba585786c74187a319c694d",
-      "bytes": 6769
+      "source_sha256": "53d9705d97b3c43c3f87a399d0182dce773b9307a7db985f3653f1f4c5123757",
+      "sha256": "53d9705d97b3c43c3f87a399d0182dce773b9307a7db985f3653f1f4c5123757",
+      "bytes": 7107,
+      "changes": [
+        "No-code text/CSV classification workbench; no new benchmark results."
+      ]
     },
     {
       "path": "tests/test_silent_failure_data.py",
@@ -8429,6 +9640,15 @@
       ]
     },
     {
+      "path": "tests/test_space_app.py",
+      "sha256": "eccf01b62cbe7c9d1bbb428e0f362816fa8f858d97f093309bb65c91b90c3248",
+      "bytes": 9533,
+      "source_sha256": "eccf01b62cbe7c9d1bbb428e0f362816fa8f858d97f093309bb65c91b90c3248",
+      "changes": [
+        "No-code text/CSV classification workbench; no new benchmark results."
+      ]
+    },
+    {
       "path": "tests/test_sponsor_segments.py",
       "sha256": "77b0fe4a221ef589476230a2c7c6f044141b89c4be61255fb125a1f5627cc7c8",
       "bytes": 4597,
@@ -8437,6 +9657,12 @@
       "changes": [
         "Verified community/provider-comparison follow-up; public projection where documented."
       ]
+    },
+    {
+      "path": "tests/test_sql_semantics_v3.py",
+      "source_sha256": "bb9f55c1df99d26c2d243c4f0c57d709fd287e014b3367d7158a193b5914c63a",
+      "sha256": "bb9f55c1df99d26c2d243c4f0c57d709fd287e014b3367d7158a193b5914c63a",
+      "bytes": 11729
     },
     {
       "path": "tests/test_training_initialization.py",
@@ -8480,6 +9706,15 @@
       "bytes": 3538
     },
     {
+      "path": "tests/test_workbench.mjs",
+      "sha256": "e575c15aa618aba70de4b0b7906f0764464cfc5884b85266284ee9b4af4fca29",
+      "bytes": 3576,
+      "source_sha256": "e575c15aa618aba70de4b0b7906f0764464cfc5884b85266284ee9b4af4fca29",
+      "changes": [
+        "No-code text/CSV classification workbench; no new benchmark results."
+      ]
+    },
+    {
       "path": "tests/test_workflows.py",
       "source_sha256": "cbec713649762b8966f17f7fad40da3be35b170fd566d6f8f9ccdfd4e69bbe50",
       "sha256": "cbec713649762b8966f17f7fad40da3be35b170fd566d6f8f9ccdfd4e69bbe50",
@@ -8496,264 +9731,6 @@
       "source_sha256": "8d77b0b07ec0e34af6dfa238d05d2f95109926df91b468bfb238276610d1c420",
       "sha256": "8d77b0b07ec0e34af6dfa238d05d2f95109926df91b468bfb238276610d1c420",
       "bytes": 1875
-    },
-    {
-      "path": "docs/community-hard-training-v3.md",
-      "source_sha256": "711f92869df5a41c8998e7746de867c2fc52e018571e51eb18c9fa0e253487db",
-      "sha256": "711f92869df5a41c8998e7746de867c2fc52e018571e51eb18c9fa0e253487db",
-      "bytes": 7188
-    },
-    {
-      "path": "docs/community-routing-v3.md",
-      "source_sha256": "8ed833a5c0bd468159911efc704a192cd91fcc8e3e61770aca95c96c390a95db",
-      "sha256": "8ed833a5c0bd468159911efc704a192cd91fcc8e3e61770aca95c96c390a95db",
-      "bytes": 9354
-    },
-    {
-      "path": "docs/community-workflow-v3.md",
-      "source_sha256": "df842498a04f5893bf578750e1b42ee8505d0ae531c8e2c6576ec96e6850e183",
-      "sha256": "df842498a04f5893bf578750e1b42ee8505d0ae531c8e2c6576ec96e6850e183",
-      "bytes": 7809
-    },
-    {
-      "path": "docs/internal-evaluation.md",
-      "source_sha256": "d9d1c0135fb435516434d03a291f604dee2d296af67880ce6cf3fa149ad08b6e",
-      "sha256": "d9d1c0135fb435516434d03a291f604dee2d296af67880ce6cf3fa149ad08b6e",
-      "bytes": 7363
-    },
-    {
-      "path": "docs/sql-semantics-v3.md",
-      "source_sha256": "ed995257576de0ac3eb3651cdb52bba9410a045f1a531e70c5b540f90d7803a1",
-      "sha256": "ed995257576de0ac3eb3651cdb52bba9410a045f1a531e70c5b540f90d7803a1",
-      "bytes": 6735
-    },
-    {
-      "path": "jev/community_routing_v3.py",
-      "source_sha256": "75dfd7d1742cea78cbb28e1788b8544e526f47727b5c1796c59c5a25c3674bd4",
-      "sha256": "75dfd7d1742cea78cbb28e1788b8544e526f47727b5c1796c59c5a25c3674bd4",
-      "bytes": 19773
-    },
-    {
-      "path": "jev/community_workflow_v3.py",
-      "source_sha256": "e7e4bc911787ff37d3a8c8553f26e6168a4c1cc77fd787de6f17876d467fb4c2",
-      "sha256": "e7e4bc911787ff37d3a8c8553f26e6168a4c1cc77fd787de6f17876d467fb4c2",
-      "bytes": 35140
-    },
-    {
-      "path": "jev/sql_semantics_v3.py",
-      "source_sha256": "9f3cf5436c5fcb94845207967d4b9e1a5f90ffdb221803389bb62db33dc0ced3",
-      "sha256": "9f3cf5436c5fcb94845207967d4b9e1a5f90ffdb221803389bb62db33dc0ced3",
-      "bytes": 33985
-    },
-    {
-      "path": "reports/community-diversity-v3/audit_integration.py",
-      "source_sha256": "d53a7e9d5325edda8036a747ae2ad40c31334bbd1def82f2baf908ea8ac38588",
-      "sha256": "d53a7e9d5325edda8036a747ae2ad40c31334bbd1def82f2baf908ea8ac38588",
-      "bytes": 20918
-    },
-    {
-      "path": "reports/community-diversity-v3/final-overlap-screen.json",
-      "source_sha256": "34abad5ac328e4ae4ebeee69e4c38cca07ca6c56d96a84bffc43c3d4dc60b607",
-      "sha256": "34abad5ac328e4ae4ebeee69e4c38cca07ca6c56d96a84bffc43c3d4dc60b607",
-      "bytes": 1127
-    },
-    {
-      "path": "reports/community-diversity-v3/focus-panel-manifest.json",
-      "source_sha256": "3cd051b48f324cf1d24c6981bed31269a503f12e2e7c0bd203a3391a586c2e8a",
-      "sha256": "3cd051b48f324cf1d24c6981bed31269a503f12e2e7c0bd203a3391a586c2e8a",
-      "bytes": 3938
-    },
-    {
-      "path": "reports/community-diversity-v3/integration-audit.json",
-      "source_sha256": "12e495b31200019f49137c26ca1ea5b78b82e52230e69faf15340596def39505",
-      "sha256": "12e495b31200019f49137c26ca1ea5b78b82e52230e69faf15340596def39505",
-      "bytes": 14768
-    },
-    {
-      "path": "reports/community-diversity-v3/training-mixture-manifest.json",
-      "source_sha256": "0c4abb45b9703a18d6e406013ea1f7d2c1f3d355b951d9f98d1875297d0dda05",
-      "sha256": "0c4abb45b9703a18d6e406013ea1f7d2c1f3d355b951d9f98d1875297d0dda05",
-      "bytes": 19277
-    },
-    {
-      "path": "reports/community-diversity-v3/training-plan.json",
-      "source_sha256": "365375ef024f4b47f2fba311e3a25600704058e8c3ee1d32fcac9e080540c6ad",
-      "sha256": "365375ef024f4b47f2fba311e3a25600704058e8c3ee1d32fcac9e080540c6ad",
-      "bytes": 3227
-    },
-    {
-      "path": "reports/community-diversity-v3/validation.json",
-      "source_sha256": "b2d982156674b9c2b8d486727a40260dc7211ff3ef71d89e2eb8797c67a39fa2",
-      "sha256": "b2d982156674b9c2b8d486727a40260dc7211ff3ef71d89e2eb8797c67a39fa2",
-      "bytes": 755
-    },
-    {
-      "path": "reports/community-routing-v3/cpu-tests.txt",
-      "source_sha256": "4c0f58331c1d0f318a223bc80bf84c1e7afbf430dfa175ddb0dc62e5936c746e",
-      "sha256": "4c0f58331c1d0f318a223bc80bf84c1e7afbf430dfa175ddb0dc62e5936c746e",
-      "bytes": 1478
-    },
-    {
-      "path": "reports/community-routing-v3/data-manifest.json",
-      "source_sha256": "9ec1fdb644fa949e3cc879c335133f18bda3d741eb93183e5154b3616058a57e",
-      "sha256": "9ec1fdb644fa949e3cc879c335133f18bda3d741eb93183e5154b3616058a57e",
-      "bytes": 16862
-    },
-    {
-      "path": "reports/community-routing-v3/full-catalog-eval-only.json",
-      "source_sha256": "5596759515a02c1f7578fb53d58b359bc889534626812b7a40eb337ce1f43d68",
-      "sha256": "5596759515a02c1f7578fb53d58b359bc889534626812b7a40eb337ce1f43d68",
-      "bytes": 181573
-    },
-    {
-      "path": "reports/community-routing-v3/independent_audit.py",
-      "source_sha256": "364a60bed984e9fc969626d78a56431ebaad292c7beee95d144d742ad97ea4d9",
-      "sha256": "364a60bed984e9fc969626d78a56431ebaad292c7beee95d144d742ad97ea4d9",
-      "bytes": 15345
-    },
-    {
-      "path": "reports/community-routing-v3/integrity-audit.json",
-      "source_sha256": "c4571e52c2f640b929e1ccbe7513a959c56ab84d5abb25fd33cbd9be0110801e",
-      "sha256": "c4571e52c2f640b929e1ccbe7513a959c56ab84d5abb25fd33cbd9be0110801e",
-      "bytes": 4929
-    },
-    {
-      "path": "reports/community-routing-v3/source-manifest.json",
-      "source_sha256": "845a0006f8e694fee87c28bada16e26034b3022a344df9c3246a4c93a1726a12",
-      "sha256": "845a0006f8e694fee87c28bada16e26034b3022a344df9c3246a4c93a1726a12",
-      "bytes": 1925
-    },
-    {
-      "path": "reports/community-workflow-v3/README.md",
-      "source_sha256": "711fea29e609a97dd3b813f2fb502075b82058fd64cc61938cd85df3029be29e",
-      "sha256": "711fea29e609a97dd3b813f2fb502075b82058fd64cc61938cd85df3029be29e",
-      "bytes": 1747
-    },
-    {
-      "path": "reports/community-workflow-v3/audit_visible_records.py",
-      "source_sha256": "20006cc94d606994d4e0b0c2bf48931a7a12ed9ae60cb19b3d68d56dd682b78d",
-      "sha256": "20006cc94d606994d4e0b0c2bf48931a7a12ed9ae60cb19b3d68d56dd682b78d",
-      "bytes": 12339
-    },
-    {
-      "path": "reports/community-workflow-v3/independent-audit.json",
-      "source_sha256": "e60e5a3b0a784cae0a6b0344cec44a408653ae22fa993fa509df9fd51afadb83",
-      "sha256": "e60e5a3b0a784cae0a6b0344cec44a408653ae22fa993fa509df9fd51afadb83",
-      "bytes": 1951
-    },
-    {
-      "path": "reports/community-workflow-v3/manifest.json",
-      "source_sha256": "3fc6c0539c1a32325c9d0e0311c308019d4e2afab88d68f12f738ac636572af4",
-      "sha256": "3fc6c0539c1a32325c9d0e0311c308019d4e2afab88d68f12f738ac636572af4",
-      "bytes": 3577
-    },
-    {
-      "path": "reports/community-workflow-v3/validation.json",
-      "source_sha256": "028013dc4faf0096502d3fa698ed0e34aeee5cdfbf658c34e3cc2f9c345585f7",
-      "sha256": "028013dc4faf0096502d3fa698ed0e34aeee5cdfbf658c34e3cc2f9c345585f7",
-      "bytes": 1234
-    },
-    {
-      "path": "reports/community-workflow-v3/visible-input-audit.json",
-      "source_sha256": "86932747737a1e0f83c6645a26b80da1cf0805991cdcf9c05017ac0d0c6277e5",
-      "sha256": "86932747737a1e0f83c6645a26b80da1cf0805991cdcf9c05017ac0d0c6277e5",
-      "bytes": 2482
-    },
-    {
-      "path": "reports/sql-semantics-v3/generation-audit.json",
-      "source_sha256": "2d359ee23dd3b8f712008f56a95be483de14d23e06879807883a91dd06691d62",
-      "sha256": "2d359ee23dd3b8f712008f56a95be483de14d23e06879807883a91dd06691d62",
-      "bytes": 1738
-    },
-    {
-      "path": "reports/sql-semantics-v3/independent-replay-audit.json",
-      "source_sha256": "3406f8a946b1d4177730b7aea24a0dfb1e550759aa8be10ca2818ad3196e3340",
-      "sha256": "3406f8a946b1d4177730b7aea24a0dfb1e550759aa8be10ca2818ad3196e3340",
-      "bytes": 1673
-    },
-    {
-      "path": "reports/sql-semantics-v3/independent_audit.py",
-      "source_sha256": "5fe2e96ddd84b27ee43f40ce743f035e7e04fcc994b57b3fcbfd659f53ee8483",
-      "sha256": "5fe2e96ddd84b27ee43f40ce743f035e7e04fcc994b57b3fcbfd659f53ee8483",
-      "bytes": 12904
-    },
-    {
-      "path": "reports/sql-semantics-v3/manifest.json",
-      "source_sha256": "26aa4e0aab6d30c3bb7f77eda0e36e56c8aaaaa8f04ab9aae5a3ff39022b1f8f",
-      "sha256": "26aa4e0aab6d30c3bb7f77eda0e36e56c8aaaaa8f04ab9aae5a3ff39022b1f8f",
-      "bytes": 5449
-    },
-    {
-      "path": "scripts/evaluate_community_pair.py",
-      "source_sha256": "3895d23ef44657bcca8dc39e2c82487a286b291d5e2c271da5374a0ce654d2cc",
-      "sha256": "3895d23ef44657bcca8dc39e2c82487a286b291d5e2c271da5374a0ce654d2cc",
-      "bytes": 25569
-    },
-    {
-      "path": "tests/test_community_pair.py",
-      "source_sha256": "4034b3ee465c892ab8da88627096f21634399850c60960a73f2e7a7a4a91faa2",
-      "sha256": "4034b3ee465c892ab8da88627096f21634399850c60960a73f2e7a7a4a91faa2",
-      "bytes": 18396
-    },
-    {
-      "path": "tests/test_community_routing_v3.py",
-      "source_sha256": "46547b7c484e61d2ac6012c5e663558e9e259871d6814b5b8e053c9403a1557e",
-      "sha256": "46547b7c484e61d2ac6012c5e663558e9e259871d6814b5b8e053c9403a1557e",
-      "bytes": 8793
-    },
-    {
-      "path": "tests/test_community_workflow_v3.py",
-      "source_sha256": "f9997f8fb2c851fe2ca0936143b38f15a1cb05613583859e40d6129c4a79ffb2",
-      "sha256": "f9997f8fb2c851fe2ca0936143b38f15a1cb05613583859e40d6129c4a79ffb2",
-      "bytes": 13071
-    },
-    {
-      "path": "tests/test_sql_semantics_v3.py",
-      "source_sha256": "bb9f55c1df99d26c2d243c4f0c57d709fd287e014b3367d7158a193b5914c63a",
-      "sha256": "bb9f55c1df99d26c2d243c4f0c57d709fd287e014b3367d7158a193b5914c63a",
-      "bytes": 11729
-    },
-    {
-      "path": "docs/benchmarks.md",
-      "source_sha256": "2df83beeb7823b686cf634366f45134a2335eda840ebef96865c8b2c2481d4b9",
-      "source_origin": "Authored in the public checkout from preserved published reports; no private source file at the baseline source commit.",
-      "sha256": "2df83beeb7823b686cf634366f45134a2335eda840ebef96865c8b2c2481d4b9",
-      "bytes": 10065,
-      "changes": [
-        "Readable research-project presentation, unified benchmark index and explicit resource links; original scientific JSON and media preserved."
-      ]
-    },
-    {
-      "path": "reports/community-diversity-v3/queue-status.json",
-      "source_sha256": "03288db9e9d95f54abc5d000a733b8ab415869cf974ec6a74f02508c5ee35c58",
-      "sha256": "03288db9e9d95f54abc5d000a733b8ab415869cf974ec6a74f02508c5ee35c58",
-      "bytes": 976
-    },
-    {
-      "path": "reports/community-diversity-v3/tokenizer-preflight.json",
-      "source_sha256": "bbb318bde010d18392c8c7ea085c9f60c91438ef6999850c67ff20a10c8662d6",
-      "sha256": "bbb318bde010d18392c8c7ea085c9f60c91438ef6999850c67ff20a10c8662d6",
-      "bytes": 10758
-    },
-    {
-      "path": "reports/site/benchmark-redesign-validation.json",
-      "source_sha256": "eaba74b5dadd463c0153e5ca5ae6fdd16da75a144182347e61a3ef52e50c6689",
-      "source_origin": "Authored in the public checkout from preserved published reports; no private source file at the baseline source commit.",
-      "sha256": "eaba74b5dadd463c0153e5ca5ae6fdd16da75a144182347e61a3ef52e50c6689",
-      "bytes": 5469,
-      "changes": [
-        "Readable research-project presentation, unified benchmark index and explicit resource links; original scientific JSON and media preserved."
-      ]
-    },
-    {
-      "path": "site/benchmarks/index.html",
-      "source_sha256": "af6551267d9644c23fb543b5858429662494dcbbbd28c157569bc689122dd32a",
-      "source_origin": "Authored in the public checkout from preserved published reports; no private source file at the baseline source commit.",
-      "sha256": "af6551267d9644c23fb543b5858429662494dcbbbd28c157569bc689122dd32a",
-      "bytes": 15647,
-      "changes": [
-        "Readable research-project presentation, unified benchmark index and explicit resource links; original scientific JSON and media preserved."
-      ]
     }
   ],
   "excluded_development_files": [
@@ -9239,7 +10216,7 @@
   "archived_remote_context_links_verified": 15,
   "scientific_metrics_modified": false,
   "social_posts_published_by_this_release": false,
-  "current_source_commit": "529443b42684f625e542e14987b0e8cb7e89e9e6",
+  "current_source_commit": "85c8465c2dd4e0463a301451e7942da9423d05f5",
   "followup_releases": [
     {
       "id": "community-and-provider-comparison-20260920",
@@ -9944,6 +10921,421 @@
         "stylesheet_cache_version": "readable-20260921",
         "report": "reports/site/benchmark-redesign-validation.json"
       }
+    },
+    {
+      "id": "no-code-workbench-source-20260923",
+      "source_commit": "9e7eff3f99f86b4f49bf143d77d70007b7468c62",
+      "created_at": "2026-09-23T05:53:39.902069+00:00",
+      "paths": [
+        "README.md",
+        "jev/server.py",
+        "examples/index.html",
+        "examples/workbench/index.html",
+        "examples/workbench/styles.css",
+        "examples/workbench/app.js",
+        "examples/workbench/logic.mjs",
+        "tests/test_serving.py",
+        "tests/test_workbench.mjs",
+        "tests/test_space_app.py",
+        "deploy/huggingface-space/app.py",
+        "deploy/huggingface-space/Dockerfile",
+        "docs/get-started.md",
+        "deploy/huggingface-space/README.md"
+      ],
+      "description": "Interactive browser text/CSV categorization, reproducible CPU Space deployment, and user guide. Model predictions require a real service; illustrative data are clearly labeled.",
+      "new_model_quality_results": false,
+      "existing_numeric_results_modified": false,
+      "raw_training_data_included": false,
+      "private_operational_files_included": false,
+      "social_posts_published": false,
+      "verification": {
+        "cpu_http_and_contract_tests": 21,
+        "javascript_contract_tests": 6,
+        "fixture_browser_checks": 11,
+        "fixture_checks_are_model_inference": false
+      }
+    },
+    {
+      "id": "hosted-workbench-20260923",
+      "source_commit": "ea4455fa98ddd435a70b1ac0bc848af02a683ccc",
+      "created_at": "2026-09-23T06:00:31.443445+00:00",
+      "paths": [
+        "README.md",
+        "docs/get-started.md",
+        "deploy/huggingface-space/README.md",
+        "site/index.html",
+        "site/styles.css",
+        "site/workbench/index.html",
+        "reports/workbench/README.md",
+        "reports/workbench/validation.json"
+      ],
+      "description": "Launch the released 2B CPU classification workbench with website entry and real browser CSV/export validation.",
+      "new_model_quality_results": false,
+      "existing_numeric_results_modified": false,
+      "raw_training_data_included": false,
+      "private_operational_files_included": false,
+      "social_posts_published": false,
+      "verification": {
+        "real_cpu_smoke_requests": 1,
+        "invalid_request_rejected": true,
+        "real_browser_batch_rows": 2,
+        "real_browser_checks": 12,
+        "fixture_site_layout_checks": 4,
+        "gpu_jobs_started": false,
+        "record": "reports/workbench/validation.json"
+      }
+    },
+    {
+      "id": "audited-27b-v1.1-20260923",
+      "source_commit": "19d1a5bb04b1b61d7cae1e8440cd2afdfdeccd8d",
+      "created_at": "2026-09-23T07:52:32.103680+00:00",
+      "paths": [
+        "README.md",
+        "docs/benchmarks.md",
+        "docs/internal-evaluation.md",
+        "docs/internal-full-evaluation.md",
+        "docs/jevbench-public.md",
+        "site/index.html",
+        "site/benchmarks/index.html",
+        "site/story/index.html",
+        "release/project-story/index.html",
+        "site/results.json",
+        "site/jevbench.json",
+        "site/jevbench.js",
+        "scripts/build_site_results.py",
+        "reports/new27b-internal-full-20260923/README.md",
+        "reports/new27b-internal-full-20260923/report.json",
+        "reports/new27b-internal-full-20260923/source-identities.json",
+        "reports/new27b-internal-full-20260923/verify.py",
+        "reports/new27b-internal-full-20260923/verify_campaign.py",
+        "reports/new27b-jevbench-20260922/README.md",
+        "reports/new27b-jevbench-20260922/report.json",
+        "reports/new27b-jevbench-20260922/audit.json",
+        "jev/eval_resources.py",
+        "jev/sharded_model.py",
+        "jev/shared_resources.py",
+        "jev/train_distributed.py",
+        "jev/inference_initialization.py",
+        "scripts/evaluate_internal_full.py",
+        "scripts/evaluate_internal_shard.py",
+        "scripts/internal_eval_campaign.py",
+        "site/styles.css",
+        "reports/huggingface-v1.1/model/publication.json",
+        "reports/huggingface-data-v1.1/publication.json"
+      ],
+      "description": "Complete127787-row internal evaluation and separate JevBench public231 results, with verified HF model/data releases. Keeps released2B9B and CPU workbench.",
+      "full_internal_audit_status": "passed_complete_full24_audit",
+      "full_internal_report_sha256": "19a154c1a6ed3935bac266ab04b8a395bc180739540127b4b3802190e3c34f97",
+      "model_revision": "28cf73067d5b337860bbef3c85b8b82ba8730956",
+      "dataset_revision": "10ad6888333fa97f8c948192797bad3de3040802",
+      "private_operational_capture_included": false,
+      "raw_training_data_included": false,
+      "existing_model_results_preserved": true,
+      "workbench_preserved": true,
+      "public_hardware_identifiers_sanitized": true,
+      "social_posts_published": true,
+      "social_thread_url": "https://x.com/Zefan_Cai/status/2102668551073255523",
+      "social_post_urls": [
+        "https://x.com/Zefan_Cai/status/2102668551073255523",
+        "https://x.com/Zefan_Cai/status/2102668552654496150",
+        "https://x.com/Zefan_Cai/status/2102668553845711093"
+      ],
+      "social_readback_verified": true
+    },
+    {
+      "id": "english-interface-20260923",
+      "source_commit": "cbaa163a295b769aa0ab84fe6369ca733318d13a",
+      "created_at": "2026-09-23T08:17:22.603997+00:00",
+      "paths": [
+        "README.md",
+        "deploy/huggingface-space/Dockerfile",
+        "deploy/huggingface-space/README.md",
+        "docs/get-started.md",
+        "examples/index.html",
+        "examples/workbench/index.html",
+        "examples/workbench/app.js",
+        "examples/workbench/logic.mjs",
+        "release/project-story/index.html",
+        "site/index.html",
+        "site/app.js",
+        "site/benchmarks/index.html",
+        "site/story/index.html",
+        "site/workbench/index.html",
+        "scripts/render_phone_english.py",
+        "site/media/phone-extraction-en.mp4",
+        "site/media/phone-extraction-en.jpg",
+        "site/media/phone-extraction-en.txt",
+        "site/media/phone-extraction-en.vtt",
+        "site/media/phone-extraction-en.json",
+        "release/english-ui-20260923.json"
+      ],
+      "description": "English website, story, workbench, presets, guidance and errors. Labeled English phone-demo display derivative preserves original raw request, character offsets and source media. Multilingual user input remains supported.",
+      "new_model_quality_results": false,
+      "existing_numeric_results_modified": false,
+      "raw_training_data_included": false,
+      "private_operational_files_included": false,
+      "fixed_workbench_inference_source": "45d5a0e81ab82b70070f05300afc4e821772b1f1",
+      "workbench_model": "released Open-Jev-2B on CPU",
+      "verification": {
+        "local_site_checks": 74,
+        "fixture_browser_scenarios": 12,
+        "javascript_data_contract_tests": 6,
+        "local_checks_are_model_inference": false
+      }
+    },
+    {
+      "id": "english-interface-live-verification-20260923",
+      "created_at": "2026-09-23T08:20:28.142288+00:00",
+      "source_commit": "1d811da3d677070e642782fad76a4e630320ddec",
+      "paths": [
+        "release/english-ui-20260923.json"
+      ],
+      "description": "Anonymous SHA verification of 50 public, website and Space resources; 110 live browser checks including two real CPU classification requests and CSV export. English site, story, defaults and workbench confirmed.",
+      "new_model_quality_results": false,
+      "existing_numeric_results_modified": false,
+      "raw_training_data_included": false,
+      "private_operational_files_included": false,
+      "space_commit": "8783c4d856155e56afc20f2f867f81f7cfc134d6",
+      "workbench_model": "released Open-Jev-2B on CPU"
+    },
+    {
+      "id": "27b-rewritten-announcement-20260923",
+      "created_at": "2026-09-23T08:25:38.721044+00:00",
+      "source_commit": "d12023030d1b89f6add0aa6abcf2c00b468db684",
+      "paths": [
+        "release/social/27b-rewritten-20260923/publication.json"
+      ],
+      "description": "Verified rewritten three-post announcement informed by public Jev launch, demo and benchmark posts. Original release thread preserved.",
+      "social_posts_published": true,
+      "social_thread_urls": [
+        "https://x.com/Zefan_Cai/status/2102675315894227428",
+        "https://x.com/Zefan_Cai/status/2102675317097902272",
+        "https://x.com/Zefan_Cai/status/2102675318507229240"
+      ],
+      "existing_numeric_results_modified": false,
+      "raw_training_data_included": false,
+      "private_operational_files_included": false
+    },
+    {
+      "id": "community-pr-integration-20260923",
+      "created_at": "2026-09-23T08:44:19.667418+00:00",
+      "source_commit": "7d57c968053320c215ff039092d2305d6deea330",
+      "source_code_commit": "869a84d2c670ce1a55f12e87c25a992152243571",
+      "integration_history_commit": "55b148d1755aecde3b97dc199a02773d0d2fa660",
+      "paths": [
+        ".dockerignore",
+        "Dockerfile",
+        "README.md",
+        "docker-compose.yml",
+        "docker/README.md",
+        "docker/entrypoint.sh",
+        "docker/fetch_models.py",
+        "docs/consumer-gpu.md",
+        "jev/model.py",
+        "jev/prefix_cache.py",
+        "scripts/jevbench_openjev.py",
+        "tests/test_consumer_gpu_loading.py",
+        "tests/test_docker_deployment.py",
+        "tests/test_prefix_cache_ragged.py",
+        "release/community-pr-integration-20260923.json"
+      ],
+      "description": "Reviewed community Docker deployment and opt-in consumer GPU support, with CPU integration regressions; contributor GPU measurements remain separate from audited release results.",
+      "pull_requests": [
+        {
+          "number": 1,
+          "url": "https://github.com/Zefan-Cai/Open-Jev/pull/1",
+          "head": "51cb273d682378500b7a2f11a6c7b3e07b05c409"
+        },
+        {
+          "number": 2,
+          "url": "https://github.com/Zefan-Cai/Open-Jev/pull/2",
+          "head": "22ab534c426dbe65ee841bc1e1340bec541ff7b8"
+        }
+      ],
+      "contributor_history_preserved": true,
+      "verification": {
+        "test_command": "python -m unittest tests.test_prefix_cache tests.test_serving tests.test_jevbench_openjev tests.test_prefix_cache_ragged tests.test_consumer_gpu_loading tests.test_docker_deployment",
+        "test_count": 48,
+        "test_failures": 0,
+        "test_skips": 0,
+        "test_runtime_seconds": 9.416,
+        "runtime": {
+          "torch": "2.14.0",
+          "transformers": "5.10.2",
+          "peft": "0.19.1"
+        },
+        "live_gpu_tests": false,
+        "docker_build_performed": false,
+        "original_contributor_measurements_reaudited": false
+      },
+      "existing_numeric_results_modified": false,
+      "raw_training_data_included": false,
+      "private_operational_files_included": false,
+      "social_posts_published": false,
+      "updated_pull_request_heads": {
+        "1": "d047c0bd916d2764314e7538f9101992eaf1f04b"
+      },
+      "updated_head_review": "PR #1 merged the existing public base into its contributor branch after the initial review. The Docker implementation is unchanged; the maintainer README conflict resolution is retained byte-for-byte."
+    },
+    {
+      "id": "v1.1-promotion-20260923",
+      "created_at": "2026-09-23T08:49:50.865610+00:00",
+      "source_commit": "c7fa2524ebe529042a45d453a95c7d68840ab7ca",
+      "paths": [
+        "README.md",
+        "release/demos/v1.1-confirmation-gate-20260923/README.md",
+        "release/demos/v1.1-confirmation-gate-20260923/captions.vtt",
+        "release/demos/v1.1-confirmation-gate-20260923/contact-sheet.jpg",
+        "release/demos/v1.1-confirmation-gate-20260923/evidence.json",
+        "release/demos/v1.1-confirmation-gate-20260923/frame-01.png",
+        "release/demos/v1.1-confirmation-gate-20260923/frame-07.png",
+        "release/demos/v1.1-confirmation-gate-20260923/frame-12.png",
+        "release/demos/v1.1-confirmation-gate-20260923/frame-20.png",
+        "release/demos/v1.1-confirmation-gate-20260923/frame-26.png",
+        "release/demos/v1.1-confirmation-gate-20260923/frame-30.png",
+        "release/demos/v1.1-confirmation-gate-20260923/index.html",
+        "release/demos/v1.1-confirmation-gate-20260923/manifest.json",
+        "release/demos/v1.1-confirmation-gate-20260923/poster.jpg",
+        "release/demos/v1.1-confirmation-gate-20260923/poster.png",
+        "release/demos/v1.1-confirmation-gate-20260923/render-receipt.json",
+        "release/demos/v1.1-confirmation-gate-20260923/render.py",
+        "release/demos/v1.1-confirmation-gate-20260923/replay.mp4",
+        "release/demos/v1.1-confirmation-gate-20260923/script.md",
+        "release/demos/v1.1-confirmation-gate-20260923/source-records.jsonl",
+        "release/demos/v1.1-confirmation-gate-20260923/verify.py",
+        "release/v1.1-promotion-20260923.json",
+        "scripts/export_site.py",
+        "site/app.js",
+        "site/benchmarks/index.html",
+        "site/index.html",
+        "site/jevbench.js",
+        "site/story/index.html",
+        "site/styles.css",
+        "site/v1-1/benchmark-poster.png",
+        "site/v1-1/captions.vtt",
+        "site/v1-1/evidence.json",
+        "site/v1-1/index.html",
+        "site/v1-1/poster.jpg",
+        "site/v1-1/poster.png",
+        "site/v1-1/replay.mp4",
+        "site/v1-1/script.md",
+        "site/v1-1/source-records.jsonl"
+      ],
+      "description": "Prominent Open-Jev-27B-v1.1 launch page, benchmark poster and edited playback of two audited CC0 synthetic model-output records; published metrics and released-model workbench identity preserved.",
+      "new_model_inference": false,
+      "existing_numeric_results_modified": false,
+      "raw_training_data_included": false,
+      "private_operational_files_included": false,
+      "source_records": {
+        "count": 2,
+        "license": "CC0-1.0",
+        "type": "original synthetic records already present in the public dataset",
+        "source_examples_imported": false
+      },
+      "model_revision": "28cf73067d5b337860bbef3c85b8b82ba8730956",
+      "dataset_revision": "10ad6888333fa97f8c948192797bad3de3040802",
+      "video_sha256": "70deec71219ab0db44ecdd90751f2e6d24b23215458f8da2502f6a5809357ece",
+      "workbench_model": "released Open-Jev-2B on CPU",
+      "verification": {
+        "local_launch_checks": 58,
+        "local_legacy_checks": 74,
+        "independent_evidence_audit": true,
+        "independent_media_audit": true,
+        "independent_public_source_scan": true
+      }
+    },
+    {
+      "id": "v1.1-promotion-publication-receipts-20260923",
+      "created_at": "2026-09-23T09:00:52.431720+00:00",
+      "source_commit": "024117708e43688e7e5c5a715c5ac032f3b32431",
+      "paths": [
+        "README.md",
+        "docs/benchmarks.md",
+        "release/social/README.md",
+        "release/social/27b-chart-20260923/publication.json",
+        "release/social/27b-demo-20260923/publication.json",
+        "release/v1.1-promotion-20260923.json",
+        "release/v1.1-promotion-online-20260923.json",
+        "release/community-pr-merged-20260923.json"
+      ],
+      "description": "Record the verified Open-Jev-27B-v1.1 chart, demo video and poster reply, anonymous publication checks, and merged contributor pull requests.",
+      "social_posts": {
+        "chart": "https://x.com/Zefan_Cai/status/2102682231143911911",
+        "demo_video": "https://x.com/Zefan_Cai/status/2102682845915619333",
+        "poster_reply": "https://x.com/Zefan_Cai/status/2102683479586861302"
+      },
+      "verification": {
+        "anonymous_post_body_readback": true,
+        "chart_image_content_verified": true,
+        "video_transcode_verified": true,
+        "poster_reply_parent_and_image_verified": true,
+        "website_and_public_repository_checks": 69,
+        "publication_receipts": "release/social",
+        "community_pull_requests_merged": [
+          1,
+          2
+        ],
+        "benchmark_display_names": "Open-Jev-2B and Open-Jev-9B; all numeric tokens unchanged by naming correction"
+      },
+      "existing_numeric_results_modified": false,
+      "private_operational_files_included": false,
+      "new_model_inference": false,
+      "publication_receipt_source_commit": "caccc4e2ca3a8962fd56702726b0c42c78438489"
+    },
+    {
+      "id": "canonical-readme-model-names-20260923",
+      "created_at": "2026-09-23T09:02:27.941265+00:00",
+      "source_commit": "afd37812e3d0f7b183656e19dc15c05fd17f7916",
+      "paths": [
+        "README.md"
+      ],
+      "description": "Use canonical Open-Jev-2B and Open-Jev-9B names in README prose; numeric results unchanged.",
+      "verification": {
+        "numeric_token_sequence_unchanged": true
+      },
+      "existing_numeric_results_modified": false
+    },
+    {
+      "id": "game-arcade-20260923",
+      "created_at": "2026-09-23T09:26:59.973200+00:00",
+      "source_commit": "85c8465c2dd4e0463a301451e7942da9423d05f5",
+      "paths": [
+        "README.md",
+        "docs/games.md",
+        "site/index.html",
+        "site/styles.css",
+        "site/v1-1/index.html",
+        "release/social/README.md",
+        "release/social/27b-page-20260923/publication.json",
+        "release/game-arcade-20260923.json",
+        "site/games/app.js",
+        "site/games/evidence-verification.json",
+        "site/games/evidence.json",
+        "site/games/index.html",
+        "site/games/source-records.jsonl",
+        "site/games/styles.css"
+      ],
+      "description": "Add four interactive game decision demos from 16 audited Open-Jev-27B-v1.1 snapshots with all 74 probabilities and three reference-policy disagreements; record the separately authorized public page invitation.",
+      "page": "https://zefan-cai.github.io/open-jev/games/",
+      "page_invitation_post": "https://x.com/Zefan_Cai/status/2102690015327469979",
+      "recorded_cases": 16,
+      "recorded_probabilities": 74,
+      "game_count": 4,
+      "source_license": "CC0-1.0",
+      "verification": {
+        "independent_evidence_checks": 462,
+        "independent_ui_source_checks": 24,
+        "browser_checks": 461,
+        "viewports": [
+          1440,
+          390,
+          320
+        ],
+        "model_inference": false,
+        "game_actions_executed": false
+      },
+      "existing_numeric_results_modified": false,
+      "private_operational_files_included": false
     }
   ]
 }

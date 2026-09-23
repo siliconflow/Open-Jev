@@ -72,6 +72,11 @@ class ServingTest(unittest.TestCase):
             self.assertEqual(result["model"], "test")
             with urlopen(base + "/health") as response:
                 self.assertEqual(json.load(response)["status"], "ready")
+            with urlopen(base + "/") as response:
+                self.assertTrue(response.url.endswith("/examples/workbench/index.html"))
+                self.assertIn(b'workbench', response.read())
+            with urlopen(base + "/examples/workbench/logic.mjs") as response:
+                self.assertIn(b'parseCSV', response.read())
             for body, headers, code in [(b'{"state":NaN}', {}, 422),
                                         (json.dumps(request()).encode(), {"Origin": "https://outside.invalid"}, 403)]:
                 req = Request(base + "/v1/inference", body,

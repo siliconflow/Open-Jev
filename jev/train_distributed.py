@@ -168,6 +168,9 @@ def read_distributed_checkpoint(path, identity, distribution):
 
 
 def validate_initialization_provenance(value):
+    if isinstance(value, dict) and value.get("kind") == "inference_package_weights_only":
+        from .inference_initialization import validate_inference_initialization_provenance
+        return validate_inference_initialization_provenance(value)
     hashes = {"source_manifest_sha256", "source_training_state_sha256", "source_training_identity_sha256",
               "source_distribution_sha256"}
     fixed = {"kind": "ddp_snapshot_weights_only", "optimizer": "new_adamw_state",
@@ -396,8 +399,12 @@ def final_evaluation(model, args, out, rows, baseline, meta):
 
 def run(args):
     initialize_from = getattr(args, "initialize_training_weights", None)
-    if initialize_from and args.resume_training:
+    initialize_package = getattr(args, "initialize_inference_weights", None)
+    package_manifest = getattr(args, "initialization_manifest_sha256", None)
+    if sum(bool(value) for value in (initialize_from, initialize_package, args.resume_training)) > 1:
         raise ValueError("Weights-only initialization and exact resume are mutually exclusive")
+    if bool(initialize_package) != bool(package_manifest):
+        raise ValueError("Inference-package initialization requires its pinned manifest SHA256")
     source_commit = source_checkout_commit(__file__)
     import torch
     import torch.distributed as dist
@@ -440,9 +447,16 @@ def run(args):
         identity = training_identity(args, hashes, rows, {"torch": str(torch.__version__), "transformers": version("transformers"), "peft": version("peft")})
         initialization_metadata, initialization = (read_initialization_checkpoint(
             initialize_from, args.model, args.revision, args.lora_rank) if initialize_from else (None, None))
+        if initialize_package:
+            from .inference_initialization import read_inference_initialization_package
+            initialization_metadata, initialization = read_inference_initialization_package(
+                initialize_package, package_manifest, args.model, args.revision, args.lora_rank)
         resume_hint = json.loads((Path(args.resume_training) / "resume.json").read_text()) if args.resume_training else None
         identity = bind_initialization_identity(identity, initialization=initialization, resume_metadata=resume_hint)
         initialization = identity.get("initialization")
+        if initialization and initialization["kind"] == "inference_package_weights_only":
+            identity["implementation_sha256"]["inference_initialization.py"] = _file_sha256(
+                Path(__file__).with_name("inference_initialization.py"))
         distribution = distribution_identity(args.backend)
         identities = [None] * WORLD_SIZE
         dist.all_gather_object(identities, _json_sha256({"training": identity, "distribution": distribution}))
@@ -462,7 +476,7 @@ def run(args):
         meta = {**(resume["run_metadata"] if resume else {}), **vars(args), "commit": source_commit,
                 "started_at": resume["run_metadata"]["started_at"] if resume else time.time(),
                 "initialization": ("strict_same_run_ddp_resume" if resume else
-                                   "ddp_snapshot_weights_only" if initialization else "fresh_pinned_upstream"),
+                                   initialization["kind"] if initialization else "fresh_pinned_upstream"),
                 "baseline_initialization": "warm_start_checkpoint" if initialization else "pretrained",
                 "distribution": distribution, "identity_sha256": identities[0], "data_sha256": hashes,
                 "allocation": allocation,
@@ -475,10 +489,15 @@ def run(args):
             meta["initialization_provenance"] = initialization
         if initialize_from:
             meta["initialization_source_snapshot"] = str(Path(initialize_from).resolve())
+        if initialize_package:
+            meta["initialization_source_package"] = str(Path(initialize_package).resolve())
         on_rank_zero(lambda: (out / "run.json").write_text(json.dumps(meta, indent=2) + "\n"))
         model = DecisionModel(args.model, args.revision, device=str(device), lora_rank=args.lora_rank, max_length=args.max_length)
         if initialize_from:
             initialize_training_weights(model, initialize_from, initialization_metadata, initialization)
+        if initialize_package:
+            from .inference_initialization import initialize_inference_weights
+            initialize_inference_weights(model, initialize_package, initialization_metadata, initialization)
         meta["trainable_parameters"] = sum(p.numel() for p in model.parameters() if p.requires_grad)
         optimizer = torch.optim.AdamW([
             {"params": [p for p in model.backbone.parameters() if p.requires_grad], "lr": args.lr},
@@ -552,7 +571,8 @@ def run(args):
                        "limitations": ["Fresh four-rank run, not continuation of a single-process pilot", "DDP reduction/RNG streams do not promise bitwise single-process equivalence", "Synthetic held-out metrics do not establish real-world task competence"]}
             if initialization:
                 summary.update(initialization_provenance=initialization, baseline_initialization="warm_start_checkpoint")
-                summary["limitations"][0] = "New four-rank training stage initialized from a prior DDP snapshot; optimizer/RNG/cursor reset; baseline measures that initialization on the new held-out data"
+                source = "released inference package" if initialization["kind"] == "inference_package_weights_only" else "prior DDP snapshot"
+                summary["limitations"][0] = f"New four-rank training stage initialized from a {source}; optimizer/RNG/cursor reset; baseline measures that initialization on the new held-out data"
             (out / "summary.json").write_text(json.dumps(summary, indent=2) + "\n")
         on_rank_zero(reload_and_finish)
     finally:
@@ -575,6 +595,8 @@ def main():
     initialization = p.add_mutually_exclusive_group()
     initialization.add_argument("--resume-training", help="Only a matching schema-2 DDP optimizer-boundary snapshot is accepted")
     initialization.add_argument("--initialize-training-weights", help="Start a new run with only LoRA/head weights from a complete schema-2 snapshot; reset optimizer/RNG/cursor")
+    initialization.add_argument("--initialize-inference-weights", help="Start a new run from a complete released inference package directory; reset optimizer/RNG/cursor and refit calibration")
+    p.add_argument("--initialization-manifest-sha256", help="Required pinned manifest SHA256 for --initialize-inference-weights")
     run(p.parse_args())
 
 

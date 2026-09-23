@@ -83,6 +83,12 @@ def make_server(predictor, host="127.0.0.1", port=8791, *, static_root=None,
 
         def do_GET(self):
             path = urlsplit(self.path).path
+            if path == "/" and static_root is None:
+                self.send_response(302)
+                self.send_header("Location", "/examples/workbench/index.html")
+                self.send_header("Content-Length", "0")
+                self.end_headers()
+                return
             if path == "/health":
                 return self.send(200, {"status": "ready", "model": predictor.model_name, "method": predictor.method})
             if path == "/v1/models":
@@ -105,6 +111,8 @@ def make_server(predictor, host="127.0.0.1", port=8791, *, static_root=None,
                     files.append(str(candidate.relative_to(root)))
                 return self.send(200, {"files": sorted(files)})
             relative = "index.html" if path == "/" else path.removeprefix("/examples/").lstrip("/")
+            if relative.endswith("/"):
+                relative += "index.html"
             target = (root / relative).resolve()
             if not target.is_relative_to(root) or not target.is_file():
                 return self.send(404, {"error": "not found"})
