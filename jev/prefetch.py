@@ -34,7 +34,9 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
-MS_API = "https://modelscope.cn/api/v1/models"
+# MODELSCOPE_ENDPOINT (e.g. an injected mirror like hf.sc4.ai for HF) replaces the
+# public modelscope.cn base; default keeps the direct public endpoint.
+MS_API = os.environ.get("MODELSCOPE_ENDPOINT", "https://modelscope.cn").rstrip("/") + "/api/v1/models"
 HF_API = os.environ.get("HF_ENDPOINT", "https://huggingface.co").rstrip("/")
 HF_TOKEN_HEADER = "authorization: Bearer %s" % os.environ["HF_TOKEN"] if os.environ.get("HF_TOKEN") else None
 MS_MIN_BYTES = int(os.environ.get("MS_MIN_BYTES", str(100 << 20)))   # 100 MB default per-file threshold
