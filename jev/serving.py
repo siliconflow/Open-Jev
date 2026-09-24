@@ -138,7 +138,7 @@ class ImageScorer:
             raise ValueError("mixed image and text records in one request")
         from .images import decode_image
         images = [decode_image(ref) for ref in records[0]["images"]]
-        rows, tokens = self.hook.score([r for r in records], images)
+        rows, tokens = self.hook.score(records, images)
         return [row.float().cpu().tolist() for row in rows], tokens
 
 
