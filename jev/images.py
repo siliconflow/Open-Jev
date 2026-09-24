@@ -118,8 +118,18 @@ def attach(model):
 
         processor = AutoImageProcessor.from_pretrained(snapshot)   # image-only: skips the
         # Qwen3VL video sub-processor (extra deps, ffmpeg for videos) - this route takes images
-    except Exception as e:  # processor stack unavailable: refuse rather than hand-roll patches
-        raise RuntimeError(f"image channel needs AutoImageProcessor for {snapshot}: {e!r}")
+    except Exception:
+        # The local snapshot holds only what someone already fetched: prefetch installs
+        # LFS shards >=100MB, and DecisionModel.load pulls config/tokenizer - the ~1KB
+        # preprocessor_config.json was never touched, and from_pretrained on a local
+        # dir never goes to the network. Resolve by repo id + revision instead so the
+        # hub fetches the small processor files over the HF proxy like every other
+        # small file the text path loads (observed 2026-09-24 on Qwen3.8-27B).
+        try:
+            processor = AutoImageProcessor.from_pretrained(model.model_id, revision=model.revision)
+        except Exception as e:  # processor stack unavailable: refuse rather than hand-roll patches
+            raise RuntimeError(f"image channel needs AutoImageProcessor for "
+                                f"{model.model_id}@{model.revision}: {e!r}")
     hook = VisionHook(model, tower, processor,
                       cfg.image_token_id, cfg.vision_start_token_id, cfg.vision_end_token_id)
     print(f"[images] tower attached ({type(tower).__name__}), "
