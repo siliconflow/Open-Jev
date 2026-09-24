@@ -162,7 +162,11 @@ def main():
     args = vars(parser.parse_args())
     host, port = args.pop("host"), args.pop("port")
     predictor = load_predictor(**args)
-    server = make_server(predictor, host, port)
+    # Body limit override: one 5 MiB image is ~6.7 MiB base64, and the image
+    # channel (JEV_IMAGES=1) allows up to 4 - the stock 4 MiB cap would 413 any
+    # real image request. Default keeps upstream's limit for text-only servers.
+    max_body = int(os.environ.get("JEV_MAX_BODY_BYTES", 4 * 1024 * 1024))
+    server = make_server(predictor, host, port, max_body_bytes=max_body)
     print(json.dumps({"url": f"http://{host}:{server.server_port}", "model": predictor.model_name,
                       "method": predictor.method}), flush=True)
     try:
