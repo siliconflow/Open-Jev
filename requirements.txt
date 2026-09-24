@@ -4,3 +4,7 @@ peft==0.19.1
 accelerate==1.13.0
 datasets==5.0.0
 safetensors
+# image channel (JEV_IMAGES=1): the transformers qwen2_vl image processor imports
+# torchvision unconditionally, and the channel decodes jpeg/png/webp via Pillow.
+pillow>=10.0
+torchvision

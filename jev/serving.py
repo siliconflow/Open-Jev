@@ -2,6 +2,7 @@
 import math
 import time
 import hashlib
+import os
 import subprocess
 from pathlib import Path
 import json
@@ -113,6 +114,34 @@ class TorchScorer:
         return [row.float().cpu().tolist() for row in rows], stats
 
 
+class ImageScorer:
+    """Image-channel scorer (deploy pack, JEV_IMAGES gate): wraps a TorchScorer and
+    its VisionHook. Records WITHOUT the carried `images` key take the wrapped text
+    scorer verbatim - byte-identical to a gate-off server. Records with images run
+    through the hook (official preprocess, one tower pass, splice, same head); the
+    per-record image decode errors surface as ValueError -> 422.
+
+    Batching note: the hook scores a request's candidates in one padded batch, so
+    Predictor.predict's candidate_batches chunking is bypassed for image records -
+    a request either fits in one pass or exceeds max_candidates anyway. The noul
+    duplication logic (forward's torch.stack for kind == "noul") is replicated by
+    the hook, so TorchScorer.format_response compatibility is exact.
+    """
+
+    def __init__(self, wrapped, hook):
+        self.wrapped, self.hook = wrapped, hook
+
+    def score(self, records):
+        if not any("images" in r for r in records):
+            return self.wrapped.score(records)
+        if not all("images" in r for r in records):
+            raise ValueError("mixed image and text records in one request")
+        from .images import decode_image
+        images = [decode_image(ref) for ref in records[0]["images"]]
+        rows, tokens = self.hook.score([r for r in records], images)
+        return [row.float().cpu().tolist() for row in rows], tokens
+
+
 def load_predictor(*, checkpoint=None, model_id=None, revision=None, device="cuda:0",
                    max_length=None, batch_size=32, prefix_cache=False):
     from .model import DecisionModel
@@ -149,5 +178,19 @@ def load_predictor(*, checkpoint=None, model_id=None, revision=None, device="cud
             text=True, stderr=subprocess.DEVNULL).strip()
     except (OSError, subprocess.CalledProcessError):
         provenance["code_commit"] = None
-    return Predictor(TorchScorer(model), model_name=model.model_id, temperature=temperature,
+    # Image channel (deploy pack): JEV_IMAGES=1 attaches the base's untrained vision
+    # tower and wraps the scorer. Off (default) nothing is imported and the predictor
+    # is byte-identical to upstream. On a base without a vision tower the attach call
+    # prints and returns None - the scorer stays unwrapped and image requests get a
+    # 422 from Predictor (compile_request carried `images`, but no scorer claims it
+    # - refused explicitly below, never silently dropped).
+    scorer = TorchScorer(model)
+    if os.environ.get("JEV_IMAGES") == "1":
+        from .images import ImageScorer, attach
+
+        hook = attach(model)
+        if hook is not None:
+            scorer = ImageScorer(scorer, hook)
+            print("[images] scorer wrapped (JEV_IMAGES=1)", flush=True)
+    return Predictor(scorer, model_name=model.model_id, temperature=temperature,
                      batch_size=batch_size, method=method, provenance=provenance, prefix_cache=prefix_cache)

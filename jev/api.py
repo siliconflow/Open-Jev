@@ -21,6 +21,27 @@ def _description(value, *, optional=False):
     return _render(value)
 
 
+def extract_images(state):
+    """Detach the optional images list from a dict state (deploy-pack image channel).
+
+    Returns (text_state, images_or_None). A non-list `images` value is NOT an image
+    claim and stays in the state as ordinary data (rendered by _render like any
+    other JSON). Empty lists are treated as absent. Image-channel validation lives
+    in jev.images (JEV_IMAGES gate); this function only separates, so the compiled
+    records - and every text-only code path - are byte-identical with and without
+    the channel, whether or not the gate is on.
+    """
+    if isinstance(state, dict) and isinstance(state.get("images"), list) and state["images"]:
+        images = state["images"]
+        if len(images) > 4:
+            raise ValueError("at most 4 images per request")
+        if any(not isinstance(ref, str) for ref in images):
+            raise ValueError("state.images entries must be strings (data/https URLs)")
+        rest = {key: value for key, value in state.items() if key != "images"}
+        return rest, images
+    return state, None
+
+
 def compile_request(state, questions: Mapping) -> list[dict]:
     """Compile a shared state and typed questions into isolated model records.
 
@@ -31,6 +52,7 @@ def compile_request(state, questions: Mapping) -> list[dict]:
     """
     if not isinstance(state, (str, dict, list)):
         raise ValueError("state must be text, a JSON object, or an array")
+    state, images = extract_images(state)   # images never render; see extract_images
     state_copy = json.loads(json.dumps(state, ensure_ascii=False, allow_nan=False))
     if not isinstance(questions, Mapping) or not questions:
         raise ValueError("questions must be a nonempty mapping")
@@ -44,6 +66,8 @@ def compile_request(state, questions: Mapping) -> list[dict]:
         question = _description(definition.get("instructions"))
         criteria = definition.get("criteria")
         record = {"id": question_id, "state": state_copy, "kind": kind, "question": question}
+        if images is not None:
+            record["images"] = images   # carried for the gated image channel; never rendered
         if kind == "choice":
             if not isinstance(criteria, Mapping) or not 1 <= len(criteria) <= 255:
                 raise ValueError("Choice requires between 1 and 255 candidates")

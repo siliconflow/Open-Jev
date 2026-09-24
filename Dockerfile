@@ -26,10 +26,15 @@ WORKDIR /workspace
 # then the rest from PyPI against the upstream pins. datasets is only needed
 # for training-side imports; jev.server never imports it, but installing it
 # keeps `pip install -e .` extras parity — cheap, avoids surprises.
+# pillow + torchvision serve the opt-in image channel (JEV_IMAGES=1): the
+# transformers qwen2_vl image processor imports torchvision unconditionally.
+# torchvision comes from the same cu126 index so its bundled-CUDA torch dep
+# resolves against the wheel above instead of pulling a second torch.
 COPY requirements.txt ./
 RUN pip install --no-cache-dir --index-url https://download.pytorch.org/whl/cu126 \
       "torch>=2.8,<2.10" \
-    && pip install --no-cache-dir -r requirements.txt
+    && pip install --no-cache-dir --extra-index-url https://download.pytorch.org/whl/cu126 \
+      -r requirements.txt
 
 # Optional runtime extras (small): phone-numbers control task. The doom extra
 # (vizdoom) is a game-rendering dependency and is NOT shipped.
